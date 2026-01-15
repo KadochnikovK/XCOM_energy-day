@@ -1,0 +1,187 @@
+.hero {
+    padding-bottom: var(--size-lg);
+    background: url(./images/background.png) center/cover no-repeat;
+    //
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+    border-radius: 0 0 var(--size-sm) var(--size-sm);
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 100%;
+        // align-items: center;
+        // min-height: 70vh;
+        gap: var(--size-sm);
+        color: var(--color-bright);
+        position: relative;
+        z-index: 1;
+        height: calc(100vh - (var(--size-lg) * 2));
+        opacity: 1;
+        visibility: visible;
+        margin-top: var(--size-lg);
+        transition:
+            opacity 0.3s,
+            visibility 0.3s;
+
+        &--hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    &__info {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: var(--size-lg);
+        gap: var(--size-xxxs);
+        // text-transform: uppercase;
+        font-weight: 900;
+        text-align: center;
+        color: inherit;
+
+        filter: drop-shadow(-10px 3px 3.7px rgba(0, 0, 0, 0.25));
+
+        &--big {
+            font-size: var(--size-sm);
+        }
+
+        @include sm {
+            gap: var(--size-sm);
+            flex-direction: row;
+        }
+    }
+
+    &__description {
+        font-weight: 200;
+        font-size: var(--size-xs);
+        margin-top: var(--size-sm);
+        text-align: center;
+    }
+
+    &__headline {
+        font-size: var(--size-xxl) !important;
+        font-weight: 900;
+        color: inherit;
+        text-align: left;
+        // margin-block: auto;
+        // background: linear-gradient(183deg, #afe5e1 -10%, rgba(113, 90, 74, 0) 90%);
+        // -webkit-background-clip: text;
+        // -webkit-text-fill-color: transparent;
+        // background-clip: text;
+        // text-fill-color: transparent;
+
+        // filter: drop-shadow(0px 0.3vw 0.3vw rgba(0, 0, 0, 0.25));
+
+        // -webkit-font-smoothing: antialiased;
+        // -moz-osx-font-smoothing: grayscale;
+    }
+
+    &__button-block {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__button {
+        // margin-top: var(--size-sm);
+        // background-color: var(--color-dark);
+        color: var(--color-bright);
+
+        border-radius: 0 0 var(--size-sm) var(--size-sm);
+        position: relative;
+        z-index: 0;
+
+        @include sm {
+            border-radius: var(--size-sm);
+            // color: var(--color-main);
+            // background-color: var(--color-second);
+        }
+    }
+
+    &__mobile-planet-wrapper {
+        position: absolute;
+        overflow: hidden;
+        bottom: 100%;
+        inset-inline: 0;
+        aspect-ratio: 0.5;
+    }
+
+    &__planet {
+        position: absolute;
+        // inset-inline: 22vw;
+        bottom: 0;
+        width: 100%;
+        transform-origin: center center;
+        inset-inline: 0;
+        animation: rotatePlanet 30s linear infinite;
+        z-index: 0;
+        opacity: 1;
+        visibility: visible;
+        transition:
+            opacity 0.3s,
+            visibility 0.3s;
+
+        &--mobile {
+            @include sm {
+                display: none;
+            }
+        }
+
+        &--desktop {
+            display: none;
+            @include sm {
+                display: block;
+            }
+        }
+
+        @include sm {
+            inset-inline: auto;
+            transform: translateY(50%);
+            width: 56vw;
+            min-width: 1200px;
+        }
+
+        &--hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    @keyframes rotatePlanet {
+        from {
+            transform: translateY(50%) rotate(0deg);
+        }
+
+        to {
+            transform: translateY(50%) rotate(-360deg);
+        }
+    }
+
+    &__circle {
+        position: absolute;
+        // inset-inline: 5vw;
+        min-width: 500px;
+        width: 140vw;
+        bottom: 0;
+        z-index: 0;
+        filter: contrast(50%);
+        opacity: 1;
+        visibility: visible;
+        transition:
+            opacity 0.3s,
+            visibility 0.3s;
+
+        &--hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        @include sm {
+            min-width: 1800px;
+            width: 90vw;
+        }
+    }
+}

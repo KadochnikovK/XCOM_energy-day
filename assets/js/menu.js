@@ -1,12 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const hamburger = document.querySelector('.menu__hamburger');
+    const circles = document.querySelectorAll('.circles__circle'); // круглые элементы
     const menuList = document.querySelector('.menu__list');
     const heroContent = document.querySelector('.hero__content');
     const heroCircle = document.querySelector('.hero__circle');
     const heroPlanet = document.querySelector('.hero__planet');
 
     function closeMenu() {
-        hamburger.classList.remove('menu__hamburger--active');
         menuList.classList.remove('menu__list--active');
         heroContent.classList.remove('hero__content--hidden');
         heroCircle.classList.remove('hero__circle--hidden');
@@ -15,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function toggleMenu() {
-        hamburger.classList.toggle('menu__hamburger--active');
         menuList.classList.toggle('menu__list--active');
         heroContent.classList.toggle('hero__content--hidden');
         heroCircle.classList.toggle('hero__circle--hidden');
@@ -26,22 +24,23 @@ document.addEventListener('DOMContentLoaded', function () {
             : '';
     }
 
-    hamburger.addEventListener('click', toggleMenu);
+    // Добавляем обработчик на каждый круглый элемент
+    circles.forEach(circle => {
+        circle.addEventListener('click', function(event) {
+            event.stopPropagation(); // предотвращаем всплытие
+            toggleMenu();
+        });
+    });
 
     const menuLinks = document.querySelectorAll('.menu__link');
     menuLinks.forEach(link => {
         link.addEventListener('click', closeMenu);
     });
 
-    
     const allButtons = document.querySelectorAll('button, .button, [type="button"], [type="submit"]');
     allButtons.forEach(button => {
-      
-        if (!button.classList.contains('menu__hamburger')) {
-            button.addEventListener('click', closeMenu);
-        }
+        button.addEventListener('click', closeMenu);
     });
-
 
     window.addEventListener('resize', function () {
         if (window.innerWidth >= 640) {
@@ -49,12 +48,16 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    
+    // Закрытие меню при клике вне меню и вне круглых элементов
     document.addEventListener('click', function (event) {
-       
+        const isClickInsideMenu = menuList.contains(event.target);
+        const isClickOnCircle = Array.from(circles).some(circle => 
+            circle.contains(event.target)
+        );
+        
         if (menuList.classList.contains('menu__list--active') &&
-            !menuList.contains(event.target) &&
-            !hamburger.contains(event.target)) {
+            !isClickInsideMenu &&
+            !isClickOnCircle) {
             closeMenu();
         }
     });

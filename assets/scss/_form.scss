@@ -8,9 +8,9 @@
         margin-left: auto;
         margin-right: auto;
         margin-top: var(--size-sm);
-        background: var(--color-main);
-        color: var(--color-bright);
-        box-shadow: 5px 11px 6.8px rgba(0, 0, 0, 0.5);
+        // background: var(--color-main);
+        // color: var(--color-bright);
+        // box-shadow: 5px 11px 6.8px rgba(0, 0, 0, 0.5);
 
         @include sm {
             margin-right: 0;
@@ -20,7 +20,8 @@
     &__wrapper {
         display: flex;
         flex-direction: column;
-        background-color: var(--color-second);
+        // background-color: var(--color-second);
+        background: url(./images/background.png) center/cover no-repeat;
         padding: var(--size-sm);
         border-radius: var(--size-md);
     }
@@ -80,13 +81,13 @@
 
         &--focused {
             .form__label {
-                color: var(--color-dark) !important;
+                color: var(--color-bright) !important;
             }
 
             .form__input {
-                border-color: var(--color-dark);
-                color: var(--color-dark);
-                outline: 2px solid var(--color-dark) !important;
+                border-color: var(--color-bright);
+                color: var(--color-bright);
+                outline: 2px solid var(--color-bright) !important;
             }
         }
 
@@ -116,7 +117,7 @@
             cursor: pointer;
             padding: 0;
             font-size: var(--size-xxs);
-            color: var(--color-dark);
+            color: var(--color-bright);
             font-weight: 500;
         }
 
@@ -127,7 +128,7 @@
             top: 0;
             width: 20px;
             height: 20px;
-            border: 1px solid var(--color-dark);
+            border: 1px solid var(--color-bright);
             border-radius: 10pc;
             // background: var(--color-white);
         }
@@ -151,9 +152,9 @@
     &__input {
         padding: var(--size-xxs);
         font-size: var(--size-xs);
-        border: 1px solid var(--color-dark);
+        border: 1px solid var(--color-bright);
         border-radius: var(--size-xs);
-        color: var(--color-dark);
+        color: var(--color-bright);
         width: 100%;
         background-color: rgba(0, 0, 0, 0);
 
@@ -169,7 +170,7 @@
         font-size: var(--size-sm);
         margin-bottom: var(--size-xxxs);
         font-weight: 500;
-        color: var(--color-dark);
+        color: var(--color-bright);
     }
 }
 

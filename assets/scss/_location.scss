@@ -1,0 +1,31 @@
+.location {
+    &__headline {
+        margin-bottom: var(--size-sm);
+    }
+
+    &__map {
+        height: calc((1vh + 1vw) * 25);
+        width: 100%;
+        border-radius: var(--size-sm);
+        overflow: hidden;
+        z-index: 3;
+        background: url(./images/background.png) center/cover no-repeat;
+        position: relative;
+    }
+
+    &__description {
+        text-align: center;
+        color: var(--color-bright);
+        font-size: var(--size-sm);
+        padding: var(--size-xxxs);
+        font-weight: 700;
+        // height: 100%;
+    }
+}
+
+.map {
+    width: 100%;
+    height: calc(100% - var(--size-xl));
+    border-radius: var(--size-sm);
+    overflow: hidden;
+}

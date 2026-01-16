@@ -37,16 +37,17 @@ a {
     text-decoration: none;
 }
 
-li {
-    text-decoration: none;
-    list-style: none;
-}
+
 
 .container {
     display: flex;
     flex-direction: column;
-    padding: var(--size-sm);
+    padding: var(--size-xs);
     gap: var(--size-sm);
+
+    @include xl {
+        padding: var(--size-lg);
+    }
 }
 
 .headline {
@@ -125,7 +126,8 @@ li {
 
 .connector-line {
     stroke: rgba(255, 255, 255, 0.9);
-    stroke-width: 1; /* Тонкие линии */
+    stroke-width: 1;
+    /* Тонкие линии */
     stroke-linecap: round;
     fill: none;
 }
@@ -133,22 +135,49 @@ li {
 .circles {
     display: flex;
     gap: var(--size-xxxs);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
 
-    &__circle {
-        border-radius: 10pc;
-        width: var(--size-xs);
-        height: var(--size-xs);
+&:hover {
+    transform: scale(1.1);
+}
 
-        &--blue {
-            background-color: #1a4784;
-        }
+&:active {
+    transform: scale(0.95);
+}
 
-        &--green {
-            background-color: #73ad56;
-        }
+&__circle {
+    border-radius: 10pc;
+    width: var(--size-xs);
+    height: var(--size-xs);
 
-        &--red {
-            background-color: #850000;
-        }
+    &--blue {
+        background-color: #1a4784;
+    }
+
+    &--green {
+        background-color: #73ad56;
+    }
+
+    &--red {
+        background-color: #850000;
+    }
+}
+}
+
+.before-lg {
+    display: flex !important;
+
+    @include lg {
+        display: none !important;
+    }
+}
+
+.after-lg {
+    display: none !important;
+
+    @include lg {
+        display: flex !important;
     }
 }

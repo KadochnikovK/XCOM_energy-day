@@ -1,5 +1,5 @@
 .hero {
-    padding: var(--size-lg);
+    // padding: var(--size-lg);
     background: url(./images/background.png) center/cover no-repeat;
     //
     overflow: hidden;
@@ -42,8 +42,7 @@
         font-weight: 900;
         text-align: center;
         color: inherit;
-
-        filter: drop-shadow(-10px 3px 3.7px rgba(0, 0, 0, 0.25));
+        // filter: drop-shadow(-10px 3px 3.7px rgba(0, 0, 0, 0.25));
 
         &--big {
             font-size: var(--size-sm);

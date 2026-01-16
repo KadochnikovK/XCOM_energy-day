@@ -1,0 +1,31 @@
+.partners {
+    padding: var(--size-sm);
+
+    &__headline {
+        margin-bottom: var(--size-sm);
+    }
+
+    &__slider {
+        overflow: visible !important;
+    }
+
+    &__slide {
+        height: 15vh;
+        border-radius: var(--size-sm);
+        background-color: var(--color-bright);
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__image {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+}
+
+
+// .swiper-slide {
+//     height: auto;
+// }

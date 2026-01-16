@@ -1,119 +1,219 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/style.css" />
-    <link rel="stylesheet" href="assets/plugins/animations/animations.css" />
-    <title>XCOM — Aquaris webinar</title>
-  </head>
 
-  <body class="body">
-    <header class="header container">
-      <div class="container__content header__content">
-        <div class="circles">
-          <div class="circles__circle circles__circle--blue"></div>
-          <div class="circles__circle circles__circle--green"></div>
-          <div class="circles__circle circles__circle--red"></div>
-        </div>
-        <div class="menu header__menu">
-          <!-- <div class="menu__hamburger">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+  <link rel="stylesheet" href="assets/plugins/animations/animations.css" />
+  <link rel="stylesheet" href="./assets/plugins/swiper/swiper.css" />
+  <link rel="stylesheet" href="assets/style.css" />
+
+  <script src="./assets/plugins/swiper/swiper.js"></script>
+
+  <title>XCOM — Aquaris webinar</title>
+</head>
+
+<body class="body">
+  <header class="header container">
+    <div class="container__content header__content">
+      <div class="circles">
+        <div class="circles__circle circles__circle--blue"></div>
+        <div class="circles__circle circles__circle--green"></div>
+        <div class="circles__circle circles__circle--red"></div>
+      </div>
+      <div class="menu header__menu">
+        <!-- <div class="menu__hamburger">
             <span></span>
             <span></span>
             <span></span>
           </div> -->
 
-          <nav class="menu__list">
-            <a class="menu__link" href="#schedule">Программа</a>
-            <a class="menu__link" href="#speaker">Спикер</a>
-            <a class="menu__link" href="#registration">Регистрация</a>
-          </nav>
+        <nav class="menu__list">
+          <a class="menu__link" href="#schedule">Программа</a>
+          <a class="menu__link" href="#speaker">Спикер</a>
+          <a class="menu__link" href="#registration">Регистрация</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <img class="" src="assets/images/planet.png" alt=""
+    style="z-index: -10; bottom: 100%; opacity: 0; position: absolute; bottom: 0; transform: translateY(50%); width: 1vw; min-width: 00px" />
+
+  <main>
+    <section class="container hero">
+      <div class="container__content hero__content">
+        <p class="paragraph hero__info outline-text" style="z-index: 2">2026</p>
+        <h1 class="headline hero__headline" style="z-index: 2">Energy Day</h1>
+        <p class="paragraph hero__info" style="z-index: 2">20 марта ◦ 11:00 ◦ 2025</p>
+        <div class="hero__button-block">
+          <a href="#registration" class="button hero__button">
+            <span class="button__text">Зарегистрироваться</span>
+          </a>
+          <img src="assets/images/logo.svg" alt="XCOM" />
         </div>
       </div>
-    </header>
-
-    <img class="" src="assets/images/planet.png" alt="" style="z-index: -10; bottom: 100%; opacity: 0; position: absolute; bottom: 0; transform: translateY(50%); width: 1vw; min-width: 00px" />
-
-    <main>
-      <section class="container hero">
-        <div class="container__content hero__content">
-          <p class="paragraph hero__info outline-text" style="z-index: 2">2026</p>
-          <h1 class="headline hero__headline" style="z-index: 2">Energy Day</h1>
-          <p class="paragraph hero__info" style="z-index: 2">20 марта ◦ 11:00 ◦ 2025</p>
-          <div class="hero__button-block">
-            <a href="#registration" class="button hero__button">
-              <span class="button__text">Зарегистрироваться</span>
-            </a>
-            <img src="assets/images/logo.svg" alt="XCOM" />
+    </section>
+    <section class="container schedule" id="schedule">
+      <h2 class="headline schedule__headline">Программа и тематика</h2>
+      <div class="container__content schedule__content">
+        <div class="schedule__cards">
+          <div class="schedule__card schedule__card--image">
+            <div class="schedule__card-headline">Основная тематика: </div>
+            <div class="schedule__card-text">
+              Глубокий анализ проблематики импортозамещения программного обеспечения, стратегии виртуализации
+              критической инфраструктуры и практического внедрения искусственного интеллекта в
+              бизнес-процессы топливно-энергетического комплекса
+            </div>
+          </div>
+          <div class="schedule__card">
+            <div class="schedule__card-headline">Для чего мероприятие?</div>
+            <div class="schedule__card-text">
+              Мероприятие создано как экспертная площадка для открытого диалога между первыми лицами рынка. В фокусе —
+              обмен реальным опытом, обсуждение вызовов и поиск эффективных решений  Ваше
+              участие позволит не только получить актуальные инсайты из первых рук, но и напрямую повлиять на дискуссию
+              о технологическом будущем отрасли
+            </div>
           </div>
         </div>
-      </section>
-      <section class="container schedule" id="schedule">
-        <h2 class="headline schedule__headline">Программа и тематика</h2>
-        <svg class="connector-lines" xmlns="http://www.w3.org/2000/svg"></svg>
-        <div class="container__content schedule__content">
-          <div class="schedule__cards">
-            <div class="schedule__card">
-              <div class="schedule__card-headline">Основная тематика: </div>
-              <div class="schedule__card-text">
-                Глубокий анализ проблематики импортозамещения программного обеспечения, стратегии виртуализации критической инфраструктуры и практического внедрения искусственного интеллекта в
-                бизнес-процессы топливно-энергетического комплекса
-              </div>
-            </div>
-            <div class="schedule__card">
-              <div class="schedule__card-headline">Для чего мероприятие?</div>
-              <div class="schedule__card-text">
-                Мероприятие создано как экспертная площадка для открытого диалога между первыми лицами рынка. В фокусе — обмен реальным опытом, обсуждение вызовов и поиск эффективных решений  Ваше
-                участие позволит не только получить актуальные инсайты из первых рук, но и напрямую повлиять на дискуссию о технологическом будущем отрасли
-              </div>
-            </div>
-          </div>
-          <div class="schedule__offer">
-            <p class="schedule__offer-text">
-              Закрытая конференция<br />
-              Участие — только по персональным приглашениям
-            </p>
-            <a href="#registration" class="button">
-              <span class="button__text">Зарегистрироваться</span>
-            </a>
-          </div>
+        <div class="schedule__offer">
+          <p class="schedule__offer-text">
+            Закрытая конференция<br />
+            Участие — только по персональным приглашениям
+          </p>
+          <a href="#registration" class="button">
+            <span class="button__text">Зарегистрироваться</span>
+          </a>
         </div>
         <div class="schedule__table">
           <div class="schedule__row">
-            <div class="schedule__cell"></div>
-            <div class="schedule__cell"></div>
+            <div class="schedule__cell schedule__cell--time">10:00-11:00</div>
+            <div class="schedule__cell schedule__cell--description">Приветсвенное слово X-Com</div>
           </div>
           <div class="schedule__row">
-            <div class="schedule__cell"></div>
-            <div class="schedule__cell"></div>
+            <div class="schedule__cell schedule__cell--time">10:00-11:00</div>
+            <div class="schedule__cell schedule__cell--description">Основы того-то того-то</div>
           </div>
           <div class="schedule__row">
-            <div class="schedule__cell"></div>
-            <div class="schedule__cell"></div>
+            <div class="schedule__cell schedule__cell--time">10:00-11:00</div>
+            <div class="schedule__cell schedule__cell--description">Основы</div>
           </div>
           <div class="schedule__row">
-            <div class="schedule__cell"></div>
-            <div class="schedule__cell"></div>
+            <div class="schedule__cell schedule__cell--time">10:00-11:00</div>
+            <div class="schedule__cell schedule__cell--description">Основы</div>
           </div>
           <div class="schedule__row">
-            <div class="schedule__cell"></div>
-            <div class="schedule__cell"></div>
+            <div class="schedule__cell schedule__cell--time">10:00-11:00</div>
+            <div class="schedule__cell schedule__cell--description">Основы</div>
           </div>
           <div class="schedule__row">
-            <div class="schedule__cell"></div>
-            <div class="schedule__cell"></div>
+            <div class="schedule__cell schedule__cell--time">10:00-11:00</div>
+            <div class="schedule__cell schedule__cell--description">Основы</div>
           </div>
           <div class="schedule__row">
-            <div class="schedule__cell"></div>
-            <div class="schedule__cell"></div>
+            <div class="schedule__cell schedule__cell--time">10:00-11:00</div>
+            <div class="schedule__cell schedule__cell--description">Основы</div>
           </div>
           <div class="schedule__row">
-            <div class="schedule__cell"></div>
-            <div class="schedule__cell"></div>
+            <div class="schedule__cell schedule__cell--time">10:00-11:00</div>
+            <div class="schedule__cell schedule__cell--description">Основы</div>
           </div>
         </div>
-      </section>
-      <section class="container speakers" id="speaker">
+      </div>
+
+    </section>
+    <section class="location container">
+      <div class="location__content container__content">
+        <h2 class="headline location__headline">Место проведения</h2>
+        <div class="location__map">
+          <div id="map" class="map"></div>
+          <script src="https://api-maps.yandex.ru/2.1/?apikey=eb4cb2bb-d3eb-47fe-acba-5ab39a7aef28&lang=ru_RU"></script>
+          <script>
+            ymaps.ready(init);
+
+            function init() {
+              var myMap = new ymaps.Map("map", {
+                center: [55.767103, 37.638152],
+                zoom: 16,
+                controls: ["zoomControl", "fullscreenControl"],
+              });
+
+              var myPlacemark = new ymaps.Placemark(
+                [55.767103, 37.638152],
+                {
+                  balloonContent: 'Москва, Мажоров переулок 45',
+                },
+                {
+                  preset: "islands#redDotIcon",
+                }
+              );
+
+              myMap.geoObjects.add(myPlacemark);
+              myMap.behaviors.disable("scrollZoom");
+            }
+          </script>
+          <div class="location__description">
+            Москва, Мажоров переулок 45
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="speakers">
+      <div class="speakers__content">
+        <h2 class="headline speakers__headline">Эксперты</h2>
+        <div class="swiper speakers__slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide speakers__slide">
+              <div class="speakers__image-block">
+                <img src="assets/images/speaker1.png" alt="Фото 1" class="speakers__image" />
+              </div>
+              <p class="speakers__name">Камилла Пупур</p>
+
+            </div>
+            <div class="swiper-slide speakers__slide">
+              <div class="speakers__image-block">
+                <img src="assets/images/speaker1.png" alt="Фото 2" class="speakers__image" />
+              </div>
+              <p class="speakers__name">Тутта Парпа</p>
+
+            </div>
+            <div class="swiper-slide speakers__slide">
+              <div class="speakers__image-block">
+                <img src="assets/images/speaker1.png" alt="Фото 3" class="speakers__image" />
+              </div>
+              <p class="speakers__name">Кристина Мята</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="partners">
+      <div class="partners__content">
+        <h2 class="headline partners__headline">Партнеры</h2>
+        <div class="swiper partners__slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide partners__slide">
+              <img src="assets/images/partner-logo-1.png" alt="Лого 1" class="partners__image" />
+            </div>
+            <div class="swiper-slide partners__slide">
+              <img src="assets/images/partner-logo-2.png" alt="Лого 2" class="partners__image" />
+            </div>
+            <div class="swiper-slide partners__slide">
+              <img src="assets/images/partner-logo-3.png" alt="Лого 3" class="partners__image" />
+            </div>
+            <div class="swiper-slide partners__slide">
+              <img src="assets/images/partner-logo-1.png" alt="Лого 4" class="partners__image" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="container speakers" id="speaker">
         <img class="speakers__circle" src="assets/images/circles.svg" alt="" />
         <h2 class="headline speakers__headline">Спикеры</h2>
 
@@ -124,153 +224,242 @@
             <p class="speakers__description">Заместитель директора по продуктовому развитию</p>
           </div>
         </div>
-      </section>
-      <section class="container registration" id="registration">
-        <h2 class="headline">Регистрация</h2>
-        <div class="container__content registration__content">
-          <form class="form" id="main-form" action="#">
-            <div class="form__wrapper">
-              <div class="form__inputs">
-                <div class="form__item form__item--full">
-                  <label for="name" class="form__label">ФИО</label>
-                  <input type="text" class="form__input" placeholder=" " name="surname" value="" />
-                </div>
+      </section> -->
+    <section class="container registration" id="registration">
+      <h2 class="headline">Регистрация</h2>
+      <div class="container__content registration__content">
+        <form class="form" id="main-form" action="#">
+          <div class="form__wrapper">
+            <div class="form__inputs">
+              <!-- Имя и Фамилия в одной строке -->
 
-                <div class="form__item form__item--full">
-                  <label for="company" class="form__label">Наименование организации</label>
-                  <input type="text" class="form__input" placeholder=" " name="company" value="" />
-                </div>
-
-                <div class="form__item">
-                  <label for="taxId" class="form__label">ИНН</label>
-                  <input type="taxId" class="form__input" placeholder=" " name="taxId" value="" />
-                </div>
-
-                <div class="form__item">
-                  <label for="email" class="form__label">E-mail</label>
-                  <input type="email" class="form__input" placeholder=" " name="email" value="" />
-                </div>
-
-                <div class="form__item form__item--checkbox">
-                  <input type="checkbox" id="privacy-policy" name="privacy-policy" class="form__checkbox" checked />
-                  <label for="privacy-policy" class="form__checkbox-label">Я согласен на обработку персональных данных</label>
-                  <div class="error-message" style="display: none"></div>
-                </div>
+              <div class="form__item">
+                <label for="surname" class="form__label">Фамилия</label>
+                <input type="text" class="form__input" placeholder=" " name="surname" id="surname" required />
+              </div>
+              <div class="form__item">
+                <label for="name" class="form__label">Имя</label>
+                <input type="text" class="form__input" placeholder=" " name="name" id="name" required />
               </div>
 
-              <button type="submit" class="form__button button">Зарегистрироваться</button>
-            </div>
-          </form>
-        </div>
-      </section>
-    </main>
-    <footer class="footer container" id="contacts">
-      <div class="footer__content container__content">
-        <a href="https://www.xcom.ru/" class="footer__logo">
-          <img class="logo footer__logo-img" src="./assets/images/logo.svg" alt="XCOM" />
-        </a>
 
-        <div class="footer__links">
-          <div class="footer__item">
-            <p class="footer__label">О компании</p>
-            <div class="footer__text">
-              <a href="#">История</a>
-              <a href="#">О компании</a>
-              <a href="#">About us</a>
-              <a href="#">Вакансии</a>
-              <a href="#">Акции</a>
-              <a href="#">Бизнес-акселератор X-Com</a>
-              <a href="#">Проекты</a>
-              <a href="#">Пресс-центр</a>
-              <a href="#">Статьи об импортозамещении</a>
+              <!-- Телефон и Почта -->
+
+              <div class="form__item">
+                <label for="phone" class="form__label">Телефон</label>
+                <input type="tel" class="form__input" placeholder="+7 (___) ___-__-__" name="phone" id="phone"
+                  required />
+              </div>
+              <div class="form__item">
+                <label for="email" class="form__label">Почта</label>
+                <input type="email" class="form__input" placeholder="example@mail.ru" name="email" id="email"
+                  required />
+              </div>
+
+
+              <!-- Организация и Должность -->
+
+              <div class="form__item">
+                <label for="company" class="form__label">Организация</label>
+                <input type="text" class="form__input" placeholder=" " name="company" id="company" />
+              </div>
+              <div class="form__item">
+                <label for="position" class="form__label">Должность</label>
+                <input type="text" class="form__input" placeholder=" " name="position" id="position" />
+              </div>
+
+
+              <!-- ИНН -->
+              <div class="form__item form__item--full">
+                <label for="taxId" class="form__label ">ИНН</label>
+                <input type="text" class="form__input" placeholder=" " name="taxId" id="taxId" />
+              </div>
+
+              <!-- Чекбокс -->
+              <div class="form__item form__item--checkbox">
+                <input type="checkbox" id="privacy-policy" name="privacy-policy" class="form__checkbox" required />
+                <label for="privacy-policy" class="form__checkbox-label">Я согласен на обработку персональных данных
+                  *</label>
+                <div class="error-message" style="display: none"></div>
+              </div>
             </div>
+
+            <button type="submit" class="form__button button">
+              <span class="button__text">Зарегистрироваться</span>
+            </button>
           </div>
-        </div>
+        </form>
+      </div>
+    </section>
 
-        <div class="footer__links">
-          <div class="footer__item">
-            <p class="footer__label">Системная интеграция</p>
-            <div class="footer__text">
-              <a href="#">Монтаж и пусконакладка серверов</a>
-              <a href="#">Построение СХД и внедрение NAS-массивов под ключ</a>
-              <a href="#">Внедрение программного обеспечения под ключ</a>
-              <a href="#">Внедрение и сервис сетевого оборудования</a>
-              <a href="#">Внедрение офисных IP-ATC</a>
-              <a href="#">Оснащение и сервис рабочих мест</a>
-              <a href="#">Внедрение систем корпоративной печати</a>
-              <a href="#">Построение инженерных инфраструктур</a>
-              <a href="#">Внедрение и сервис систем безопасности</a>
-              <a href="#">Расчет, поставка, монтаж и обслуживание кабеленесущих систем</a>
-              <a href="#">Аутсорсинг информационной безопасности</a>
-              <a href="#">Мультимедийные решения для корпоративных коммуникаций</a>
-            </div>
+    <section class="organizer container">
+      <div class="organizer__content container__content">
+        <div class="organizer__grid">
+          <div class="organizer__item">
+            <p class="organizer__item-text organizer__item-text--big">Входим в ТОП-25</p>
+            <p class="organizer__item-text">крупнейших ИТ-компаний России</p>
+            <p class="organizer__item-text organizer__item-text--mini">(*по версии CNews Analytics)</p>
           </div>
-        </div>
-
-        <div class="footer__links">
-          <div class="footer__item">
-            <p class="footer__label">Мероприятия</p>
-            <div class="footer__text">
-              <p class="footer__sub-label">2024</p>
-              <a href="#">Вебинар X-Com и Катюша</a>
-              <a href="#">Вебинар Видеорегистраторы TRASSIR</a>
-              <a href="#">Бизнес-ужин X-Com совместно с IRBIS, Systeme Electric, IDS</a>
-              <a href="#">ИТ-конференция X-Com "Energy Day"</a>
-              <a href="#">Конференция "Здрав IT"</a>
-              <a href="#">Вебинар "Печать без границ: новый уровень экономии и качества"</a>
-              <a href="#">Демо-день конкурса "Беспилотники: поможем взлететь Вашему бизнесу"</a>
-
-              <p class="footer__sub-label">2025</p>
-              <a href="#">Конференция "Цифровизация науки и образования"</a>
-              <a href="#">Вебинар "Обзор печатной техники российского производителя"</a>
-              <a href="#">Конференция "Интеграторы систем безопасности"</a>
-              <a href="#">Конференция "Pro-AV"</a>
-              <a href="#">Вебинар "Пилотные проекты российского софта"</a>
-              <a href="#">Конференция "Системы безопасности"</a>
-            </div>
+          <div class="organizer__item">
+            <p class="organizer__item-text organizer__item-text--big">Входим в ТОП-25</p>
+            <p class="organizer__item-text">лучших системных интеграторов России 2024</p>
+            <p class="organizer__item-text organizer__item-text--mini">(*по версии IT Channel News)</p>
           </div>
-        </div>
+          <div class="organizer__item organizer__item--bright">
+            <p class="organizer__item-text organizer__item-text--big">Многопрофильный</p>
+            <p class="organizer__item-text organizer__item-text--color">ИТ-холдинг, с 1994 года на российском рынке</p>
 
-        <div class="footer__contacts">
-          <div class="footer__item">
-            <p class="footer__label">Контакты</p>
-            <div class="footer__text">
-              <span>+7 (495) 223-63-39 (Москва)</span>
-              <span>+7 (812) 740-11-20 (Санкт-Петербург)</span>
-              <span>Электронная почта: om@xcom.ru</span>
-            </div>
           </div>
-          <div class="footer__social">
-            <div class="footer__icons">
-              <a href="#"><img src="./assets/images/tg.svg" alt="Telegram" /></a>
-              <a href="#"><img src="./assets/images/vk.svg" alt="VK" /></a>
-              <a href="#"><img src="./assets/images/mail.svg" alt="Mail" /></a>
-            </div>
-            <a href="#" class="footer__link">Политика конфиденциальности</a>
+          <div class="organizer__item organizer__item--mid">
+            <p class="organizer__item-text">На рынке цифровизации и цифровой трансформации предприятий нефтегазовой
+              отрасли X-Com —</p>
+            <p class="organizer__item-text organizer__item-text--big">более 15 лет</p>
           </div>
-        </div>
+          <div class="organizer__item organizer__item--posible organizer__item--center">
+            <img src="assets/images/logo.svg" style="max-width: 50%; height: 100%;" alt="">
+          </div>
+          <div class="organizer__item organizer__item--bright organizer__item--posible">
+            <p class="organizer__item-text organizer__item-text--color">Реализованы десятки интеграционных проектов
+              различной сложности по всей территории РФ для крупнейших отраслеобразующих предприятий:</p>
+            <img src="assets/images/star.svg" class="organizer__star" alt="">
+            <p class="organizer__item-text">«Газпром», «Лукойл», «Роснефть», «Сургутнефтегаз», НОВАТЭК, «Ямал СПГ» и др.
+            </p>
+          </div>
+          <div class="organizer__item organizer__item--mid">
+            <p class="organizer__item-text">Решения X-Com для газо-нефтедобычи
+              и нефтепереработки на всех этапах производства обеспечивают:</p>
 
-        <div class="footer__copy">
-          <p class="footer__copy-text">Использование материалов, размещенных на сайте, допускается только с письменного разрешения «ООО М-ИНВЕСТ»</p>
-          <p class="footer__copy-text">2024 © «ООО М-ИНВЕСТ». Все права защищены.</p>
+            <ul class="organizer__list">
+              <li class="organizer__item-text">снижение эксплуатационных расходов,</li>
+              <li class="organizer__item-text">сокращение незапланированных остановок</li>
+              <li class="organizer__item-text">добычи и переработки ресурсов,</li>
+              <li class="organizer__item-text">повышение энергоэффективности НПЗ и эффективности рабочей силы</li>
+            </ul>
+            </p>
+          </div>
+          <div class="organizer__item organizer__item--full">
+            <p class="organizer__item-text">Основу составляют технологии искусственного интеллекта и роботизации рабочих
+              процессов,
+              а также применение «озеро данных», позволяет структурировать и эффективно анализировать разнородную
+              информацию</p>
+            <p class="organizer__item-text">Сервисное подразделение X-Com в тесном сотрудничестве с ИТ-подразделениями
+              заказчиков обеспечивает обслуживание и техническую поддержку ИТ-систем и решений вплоть до 24/7/365
+            </p>
+          </div>
         </div>
       </div>
-    </footer>
-    <div class="modal animate__animated" style="display: none">
-      <div class="modal__window animate__animated">
-        <div class="modal__close">
-          <span></span>
-          <span></span>
+    </section>
+  </main>
+  <footer class="footer container" id="contacts">
+    <div class="footer__content container__content">
+      <!-- <a href="https://www.xcom.ru/" class="footer__logo">
+        <img class="logo footer__logo-img" src="./assets/images/logo.svg" alt="XCOM" />
+      </a> -->
+
+      <div class="footer__links">
+        <div class="footer__item">
+          <p class="footer__label">О компании</p>
+          <div class="footer__text">
+            <a href="#">История</a>
+            <a href="#">О компании</a>
+            <a href="#">About us</a>
+            <a href="#">Вакансии</a>
+            <a href="#">Акции</a>
+            <a href="#">Бизнес-акселератор X-Com</a>
+            <a href="#">Проекты</a>
+            <a href="#">Пресс-центр</a>
+            <a href="#">Статьи об импортозамещении</a>
+          </div>
         </div>
-        <div class="modal__content">
-          <p class="modal__headline"></p>
-          <p class="modal__text"></p>
-          <a class="modal__button button"> </a>
+      </div>
+
+      <div class="footer__links">
+        <div class="footer__item">
+          <p class="footer__label">Системная интеграция</p>
+          <div class="footer__text">
+            <a href="#">Монтаж и пусконакладка серверов</a>
+            <a href="#">Построение СХД и внедрение NAS-массивов под ключ</a>
+            <a href="#">Внедрение программного обеспечения под ключ</a>
+            <a href="#">Внедрение и сервис сетевого оборудования</a>
+            <a href="#">Внедрение офисных IP-ATC</a>
+            <a href="#">Оснащение и сервис рабочих мест</a>
+            <a href="#">Внедрение систем корпоративной печати</a>
+            <a href="#">Построение инженерных инфраструктур</a>
+            <a href="#">Внедрение и сервис систем безопасности</a>
+            <a href="#">Расчет, поставка, монтаж и обслуживание кабеленесущих систем</a>
+            <a href="#">Аутсорсинг информационной безопасности</a>
+            <a href="#">Мультимедийные решения для корпоративных коммуникаций</a>
+          </div>
         </div>
+      </div>
+
+      <div class="footer__links">
+        <div class="footer__item">
+          <p class="footer__label">Мероприятия</p>
+          <div class="footer__text">
+            <p class="footer__sub-label">2024</p>
+            <a href="#">Вебинар X-Com и Катюша</a>
+            <a href="#">Вебинар Видеорегистраторы TRASSIR</a>
+            <a href="#">Бизнес-ужин X-Com совместно с IRBIS, Systeme Electric, IDS</a>
+            <a href="#">ИТ-конференция X-Com "Energy Day"</a>
+            <a href="#">Конференция "Здрав IT"</a>
+            <a href="#">Вебинар "Печать без границ: новый уровень экономии и качества"</a>
+            <a href="#">Демо-день конкурса "Беспилотники: поможем взлететь Вашему бизнесу"</a>
+
+            <p class="footer__sub-label">2025</p>
+            <a href="#">Конференция "Цифровизация науки и образования"</a>
+            <a href="#">Вебинар "Обзор печатной техники российского производителя"</a>
+            <a href="#">Конференция "Интеграторы систем безопасности"</a>
+            <a href="#">Конференция "Pro-AV"</a>
+            <a href="#">Вебинар "Пилотные проекты российского софта"</a>
+            <a href="#">Конференция "Системы безопасности"</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__contacts">
+        <div class="footer__item">
+          <p class="footer__label">Контакты</p>
+          <div class="footer__text">
+            <span>+7 (495) 223-63-39 (Москва)</span>
+            <span>+7 (812) 740-11-20 (Санкт-Петербург)</span>
+            <span>Электронная почта: om@xcom.ru</span>
+          </div>
+        </div>
+        <div class="footer__social">
+          <div class="footer__icons">
+            <a href="#"><img src="./assets/images/tg.svg" alt="Telegram" /></a>
+            <a href="#"><img src="./assets/images/vk.svg" alt="VK" /></a>
+            <a href="#"><img src="./assets/images/mail.svg" alt="Mail" /></a>
+          </div>
+          <a href="#" class="footer__link">Политика конфиденциальности</a>
+        </div>
+      </div>
+
+      <div class="footer__copy">
+        <p class="footer__copy-text">Использование материалов, размещенных на сайте, допускается только с письменного
+          разрешения «ООО М-ИНВЕСТ»</p>
+        <p class="footer__copy-text">2024 © «ООО М-ИНВЕСТ». Все права защищены.</p>
       </div>
     </div>
+  </footer>
+  <div class="modal animate__animated" style="display: none">
+    <div class="modal__window animate__animated">
+      <div class="modal__close">
+        <span></span>
+        <span></span>
+      </div>
+      <div class="modal__content">
+        <p class="modal__headline"></p>
+        <p class="modal__text"></p>
+        <a class="modal__button button"> </a>
+      </div>
+    </div>
+  </div>
 
-    <script src="assets/js/modal.js"></script>
-    <script src="assets/js/menu.js"></script>
-  </body>
+  <script src="assets/js/modal.js"></script>
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/slider.js"></script>
+</body>
+
 </html>

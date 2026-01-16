@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Инициализируем только main-form
     initForm("main-form");
 
     function initForm(formId) {
@@ -33,6 +32,38 @@ document.addEventListener("DOMContentLoaded", function () {
             errorElement.style.display = "block";
         }
 
+        // Маска для телефона
+        const phoneInput = form.querySelector('input[name="phone"]');
+        if (phoneInput) {
+            phoneInput.addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, '');
+                
+                if (value.length === 0) {
+                    e.target.value = '';
+                    return;
+                }
+                
+                // Формат: +7 (XXX) XXX-XX-XX
+                let formattedValue = '+7';
+                
+                if (value.length > 1) {
+                    formattedValue += ' (' + value.substring(1, 4);
+                }
+                if (value.length >= 5) {
+                    formattedValue += ') ' + value.substring(4, 7);
+                }
+                if (value.length >= 8) {
+                    formattedValue += '-' + value.substring(7, 9);
+                }
+                if (value.length >= 10) {
+                    formattedValue += '-' + value.substring(9, 11);
+                }
+                
+                e.target.value = formattedValue;
+            });
+        }
+
+        // Фокус/блюр
         const inputs = form.querySelectorAll("input, textarea");
         inputs.forEach((input) => {
             input.addEventListener("focus", handleInputFocus);
@@ -57,6 +88,12 @@ document.addEventListener("DOMContentLoaded", function () {
             const value = field.value.trim();
             const name = field.name;
             const type = field.type;
+            const isRequired = field.hasAttribute('required');
+
+            // Для необязательных полей проверяем только если есть значение
+            if (!isRequired && value === '') {
+                return true;
+            }
 
             if (type === "checkbox") {
                 if (!field.checked) {
@@ -66,28 +103,47 @@ document.addEventListener("DOMContentLoaded", function () {
                 return true;
             }
 
-            if (!value) {
+            // Проверка обязательных полей
+            if (isRequired && !value) {
                 addError(field, "Это поле обязательно для заполнения");
                 return false;
             }
 
-            if (name === "email") {
-                if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
-                    addError(field, "Введите корректный email");
-                    return false;
-                }
-            }
-
-            if (name === "taxId") {
-                if (!/^\d+$/.test(value)) {
-                    addError(field, "ИНН должен содержать только цифры");
-                    return false;
-                }
-
-                if (value.length !== 10 && value.length !== 12) {
-                    addError(field, "ИНН должен содержать 10 или 12 цифр");
-                    return false;
-                }
+            // Специфичные проверки
+            switch(name) {
+                case "email":
+                    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+                        addError(field, "Введите корректный email");
+                        return false;
+                    }
+                    break;
+                    
+                case "phone":
+                    const phoneDigits = value.replace(/\D/g, '');
+                    if (phoneDigits.length !== 11) {
+                        addError(field, "Введите корректный номер телефона (11 цифр)");
+                        return false;
+                    }
+                    break;
+                    
+                case "taxId":
+                    if (value && !/^\d+$/.test(value)) {
+                        addError(field, "ИНН должен содержать только цифры");
+                        return false;
+                    }
+                    if (value && value.length !== 10 && value.length !== 12) {
+                        addError(field, "ИНН должен содержать 10 или 12 цифр");
+                        return false;
+                    }
+                    break;
+                    
+                case "surname":
+                case "name":
+                    if (value && !/^[а-яА-ЯёЁa-zA-Z\- ]+$/.test(value)) {
+                        addError(field, "Допускаются только буквы и дефисы");
+                        return false;
+                    }
+                    break;
             }
 
             return true;
@@ -113,8 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 showModal(
                     "Регистрация прошла успешно",
-                    `Спасибо за регистрацию, ${formData.surname}!\n
-                    Ваши данные успешно отправлены. Мы свяжемся с вами в ближайшее время`,
+                    `Спасибо за регистрацию, ${formData.name} ${formData.surname}!\n\nВаши данные успешно отправлены. Мы свяжемся с вами в ближайшее время`,
                     "Хорошо"
                 );
 
@@ -125,13 +180,17 @@ document.addEventListener("DOMContentLoaded", function () {
         function collectFormData(form) {
             return {
                 surname: form.elements.surname.value.trim(),
-                taxId: form.elements.taxId.value.trim(),
-                company: form.elements.company.value.trim(),
+                name: form.elements.name.value.trim(),
+                phone: form.elements.phone.value.trim(),
                 email: form.elements.email.value.trim(),
+                company: form.elements.company.value.trim(),
+                position: form.elements.position.value.trim(),
+                taxId: form.elements.taxId.value.trim(),
                 privacyPolicy: form.elements["privacy-policy"].checked,
             };
         }
 
+        // Очистка ошибок при вводе
         form.addEventListener("input", function (e) {
             if (e.target.tagName === "INPUT") {
                 const formItem = e.target.closest(".form__item");

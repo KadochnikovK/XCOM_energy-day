@@ -1,9 +1,9 @@
 .schedule {
-    height: 100vh;
+    // height: 100vh;
     position: relative;
     // background: var(--color-main);
     overflow: hidden;
-    padding: var(--size-lg);
+    // padding: var(--size-lg);
     position: relative;
     z-index: 2;
 
@@ -26,8 +26,7 @@
         }
     }
 
-    &__item {
-    }
+    &__item {}
 
     &__dot {
         position: absolute;
@@ -52,7 +51,7 @@
         flex-direction: column;
         gap: var(--size-sm);
 
-        @include md {
+        @include xl {
             flex-direction: row;
         }
     }
@@ -60,19 +59,96 @@
     &__card {
         background: url(./images/background.png) center/cover no-repeat;
         border-radius: var(--size-sm);
-        padding: var(--size-sm);
+        padding: var(--size-lg) var(--size-sm);
+        display: flex;
+        flex-direction: column;
         flex-basis: 100%;
-        @include md {
+        flex: 1;
+        position: relative;
+        gap: var(--size-xs);
+        overflow: hidden;
+
+        &--image {
+            padding-right: 40%;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                width: 400px;
+                height: 220px;
+                left: auto;
+                right: 0;
+                transform: translateX(50px) translateY(-50%);
+                background: url(./images/item.svg) right/contain no-repeat;
+            }
+
+            @include lg {
+                padding-right: 17%;
+
+                &::after {
+
+                    width: 600px;
+                    height: 330px;
+                    transform: translateX(75px) translateY(-50%);
+                    ;
+                    background: url(./images/item.svg) right/contain no-repeat;
+                }
+            }
+        }
+
+        @include lg {
             flex-basis: 50%;
+        }
+    }
+
+    &__table {
+        background: url(./images/background.png) center/cover no-repeat;
+        border-radius: var(--size-sm);
+        padding: var(--size-lg) var(--size-sm);
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    &__row {
+
+        display: flex;
+
+        &:not(:nth-last-child(1)) {
+            border-bottom: 1px solid var(--color-bright);
+        }
+    }
+
+    &__cell {
+        padding: var(--size-xxxs);
+        display: flex;
+        align-items: center;
+        color: var(--color-bright);
+        gap: var(--size-sm);
+        font-weight: 700;
+
+        &--time {
+            font-size: var(--size-sm);
+            border-right: 1px solid var(--color-bright);
+        }
+
+        &--description {
+            font-size: var(--size-xs);
         }
     }
 
     &__card-headline {
         color: var(--color-bright);
+        font-weight: 900;
+        font-size: var(--size-md);
+        line-height: 1.2;
     }
 
     &__card-text {
         color: var(--color-bright);
+        font-size: var(--size-xs);
+        line-height: 1.2;
     }
 
     &__offer {
@@ -83,6 +159,8 @@
         align-items: center;
         padding: var(--size-sm);
         text-align: center;
+        gap: var(--size-sm);
+
         &::before {
             content: "";
             position: absolute;
@@ -90,8 +168,10 @@
             // width: 100%;
             // height: 100%;
             background: url(./images/background.png) center/cover no-repeat;
-            filter: blur(100px); /* Само размытие */
-            z-index: -1; /* Отправляем псевдоэлемент на задний план */
+            filter: blur(100px);
+            /* Само размытие */
+            z-index: -1;
+            /* Отправляем псевдоэлемент на задний план */
 
             /* Увеличиваем область, чтобы убрать прозрачные края */
             /* Можно подобрать значение под ваш случай */
@@ -123,38 +203,7 @@
             display: none;
         }
 
-        &__item {
-            position: relative;
-            top: auto !important;
-            left: auto !important;
-            max-width: 100%;
-            margin-bottom: var(--size-sm);
-            margin-right: 5vw;
-
-            &:nth-child(1) {
-                margin-left: 5vw;
-            }
-
-            &:nth-child(2) {
-                margin-left: 8vw;
-            }
-
-            &:nth-child(3) {
-                margin-left: 20vw;
-            }
-
-            &:nth-child(4) {
-                margin-left: 4vw;
-            }
-
-            &:nth-child(5) {
-                margin-left: 5vw;
-            }
-
-            &:nth-child(6) {
-                margin-left: 0;
-            }
-        }
+        &__item {}
 
         &__dot {
             top: calc(var(--size-sm) + 2px);
@@ -164,35 +213,7 @@
     @media (max-width: 480px) {
         padding: var(--size-xs);
 
-        &__item {
-            padding: var(--size-xs);
-            padding-left: calc(var(--size-xs) + var(--size-sm));
-            margin-bottom: var(--size-xs);
-
-            &:nth-child(1) {
-                margin-left: 5vw;
-            }
-
-            &:nth-child(2) {
-                margin-left: 8vw;
-            }
-
-            &:nth-child(3) {
-                margin-left: 20vw;
-            }
-
-            &:nth-child(4) {
-                margin-left: 4vw;
-            }
-
-            &:nth-child(5) {
-                margin-left: 5vw;
-            }
-
-            &:nth-child(6) {
-                margin-left: 0;
-            }
-        }
+        &__item {}
 
         &__dot {
             left: var(--size-xs);

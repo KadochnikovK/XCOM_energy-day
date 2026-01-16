@@ -464,7 +464,7 @@ li {
   }
 }
 .hero {
-  padding-bottom: var(--size-lg);
+  padding: var(--size-lg);
   background: url(./images/background.png) center/cover no-repeat;
   overflow: hidden;
   position: relative;
@@ -650,6 +650,52 @@ li {
   color: var(--color-text);
   line-height: 1.6;
   font-weight: 300;
+}
+.schedule__cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-sm);
+}
+@media (min-width: 1024px) {
+  .schedule__cards {
+    flex-direction: row;
+  }
+}
+.schedule__card {
+  background: url(./images/background.png) center/cover no-repeat;
+  border-radius: var(--size-sm);
+  padding: var(--size-sm);
+  flex-basis: 50%;
+}
+.schedule__card-headline {
+  color: var(--color-bright);
+}
+.schedule__card-text {
+  color: var(--color-bright);
+}
+.schedule__offer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--size-sm);
+  text-align: center;
+}
+.schedule__offer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url(./images/background.png) center/cover no-repeat;
+  filter: blur(100px); /* Само размытие */
+  z-index: -1; /* Отправляем псевдоэлемент на задний план */
+  /* Увеличиваем область, чтобы убрать прозрачные края */
+  /* Можно подобрать значение под ваш случай */
+  transform: scale(1.05);
+}
+.schedule__offer-text {
+  font-weight: 600;
+  color: var(--color-bright);
+  font-size: var(--size-md);
 }
 @media (max-width: 1200px) {
   .schedule {

@@ -665,7 +665,12 @@ li {
   background: url(./images/background.png) center/cover no-repeat;
   border-radius: var(--size-sm);
   padding: var(--size-sm);
-  flex-basis: 50%;
+  flex-basis: 100%;
+}
+@media (min-width: 1024px) {
+  .schedule__card {
+    flex-basis: 50%;
+  }
 }
 .schedule__card-headline {
   color: var(--color-bright);

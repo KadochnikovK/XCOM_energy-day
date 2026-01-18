@@ -7,7 +7,7 @@
     &__list {
         display: none;
 
-        @include sm {
+        @include lg {
             display: flex;
             flex-direction: row;
             position: static;
@@ -46,72 +46,31 @@
     }
 
     &__link {
-        // text-transform: uppercase;
+      
         font-weight: 700;
-        font-size: var(--size-xxs);
-        color: var(--color-main);
+        font-size: var(--size-md);
+        color: var(--color-bright);
         transition: all 0.3s;
 
         &:hover {
             color: var(--color-second);
         }
 
-        @include sm {
+        @include lg {
             font-size: var(--size-xxs);
+            color: var(--color-main);
         }
 
-        @include md {
-            font-size: var(--size-xxs);
-        }
+       
     }
 
-    &__hamburger {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        position: relative;
-        cursor: pointer;
-        width: var(--size-xl);
-        height: var(--size-md);
-        z-index: 101;
 
-        @include sm {
-            display: none;
-        }
-
-        span {
-            display: block;
-            width: 100%;
-            height: var(--size-xxxxs);
-            background-color: var(--color-second);
-            border-radius: 10pc;
-            transition: 0.3s;
-            transform-origin: center;
-        }
-
-        &--active {
-            span {
-                &:nth-child(1) {
-                    transform: translateY(calc(var(--size-md) / 2.5)) rotate(45deg);
-                }
-
-                &:nth-child(2) {
-                    opacity: 0;
-                    transform: scale(0);
-                }
-
-                &:nth-child(3) {
-                    transform: translateY(calc(var(--size-md) / -2.5)) rotate(-45deg);
-                }
-            }
-        }
-    }
 }
 
-@include sm {
+@include lg {
     .header__menu {
         margin-left: 0;
-        // margin-right: auto;
+       
     }
 
     .menu__list {

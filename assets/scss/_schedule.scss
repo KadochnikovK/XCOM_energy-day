@@ -1,9 +1,9 @@
 .schedule {
-    // height: 100vh;
+ 
     position: relative;
-    // background: var(--color-main);
+
     overflow: hidden;
-    // padding: var(--size-lg);
+   
     position: relative;
     z-index: 2;
 
@@ -19,14 +19,13 @@
             left: 0;
             right: 0;
             bottom: 0;
-            // background-image: linear-gradient(90deg, transparent 79%, rgba(var(--color-bright-rgb), 0.1) 79%), linear-gradient(90deg, transparent 64%, rgba(var(--color-bright-rgb), 0.1) 64%), linear-gradient(45deg, transparent 45%, rgba(var(--color-bright-rgb), 0.1) 45.5%);
             background-size: 100% 100%;
             pointer-events: none;
             z-index: 0;
         }
     }
 
-    &__item {}
+
 
     &__dot {
         position: absolute;
@@ -102,6 +101,23 @@
         }
     }
 
+    &__card-arrow * {
+        font-size: var(--size-lg);
+    }
+
+    &__card-navigation {
+
+        display: flex;
+        gap: var(--size-md);
+        justify-content: center;
+        margin-top: var(--size-sm);
+    }
+
+    &__card-swiper {
+        display: block !important;
+        flex: none !important;
+    }
+
     &__table {
         background: url(./images/background.png) center/cover no-repeat;
         border-radius: var(--size-sm);
@@ -109,6 +125,8 @@
         display: flex;
         flex-direction: column;
         position: relative;
+
+
     }
 
     &__row {
@@ -118,7 +136,36 @@
         &:not(:nth-last-child(1)) {
             border-bottom: 1px solid var(--color-bright);
         }
+
+        &--swiper {
+            display: block !important;
+            flex: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: none !important;
+
+            background: url(./images/background.png) center/cover no-repeat;
+            border-radius: var(--size-sm);
+            padding: var(--size-lg) var(--size-sm);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
+            & .schedule__cell--time {
+                border: none;
+            }
+
+            & .schedule__cell {
+                display: flex !important;
+                justify-content: center;
+            }
+        }
+
+
     }
+
+
 
     &__cell {
         padding: var(--size-xxxs);
@@ -127,10 +174,19 @@
         color: var(--color-bright);
         gap: var(--size-sm);
         font-weight: 700;
+        text-align: center;
 
         &--time {
             font-size: var(--size-sm);
             border-right: 1px solid var(--color-bright);
+
+            & .navigation__nav-next {
+                margin-left: auto;
+            }
+
+            & .navigation__nav-prev {
+                margin-right: auto;
+            }
         }
 
         &--description {
@@ -155,7 +211,7 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        // justify-content: center;
+
         align-items: center;
         padding: var(--size-sm);
         text-align: center;
@@ -165,16 +221,14 @@
             content: "";
             position: absolute;
             inset: 0;
-            // width: 100%;
-            // height: 100%;
+       
             background: url(./images/background.png) center/cover no-repeat;
             filter: blur(100px);
-            /* Само размытие */
+ 
             z-index: -1;
-            /* Отправляем псевдоэлемент на задний план */
+       
 
-            /* Увеличиваем область, чтобы убрать прозрачные края */
-            /* Можно подобрать значение под ваш случай */
+         
             transform: scale(1.05);
         }
     }
@@ -185,39 +239,10 @@
         font-size: var(--size-md);
     }
 
-    // Адаптивность
-    @media (max-width: 1200px) {
-        padding: var(--size-md);
-
-        // &__dot {
-        //     left: var(--size-sm);
-        // }
-    }
-
-    @media (max-width: 768px) {
-        height: auto;
-        // min-height: 100vh;
-        padding: var(--size-sm);
-
-        &__content::before {
-            display: none;
-        }
-
-        &__item {}
-
-        &__dot {
-            top: calc(var(--size-sm) + 2px);
+    &__slider {
+        .schedule__card-headline {
+        margin-bottom: var(--size-sm);    
         }
     }
 
-    @media (max-width: 480px) {
-        padding: var(--size-xs);
-
-        &__item {}
-
-        &__dot {
-            left: var(--size-xs);
-            top: calc(var(--size-xs) + 2px);
-        }
-    }
 }

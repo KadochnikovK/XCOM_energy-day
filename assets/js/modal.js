@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
             errorElement.style.display = "block";
         }
 
-        // Маска для телефона
+   
         const phoneInput = form.querySelector('input[name="phone"]');
         if (phoneInput) {
             phoneInput.addEventListener('input', function(e) {
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     return;
                 }
                 
-                // Формат: +7 (XXX) XXX-XX-XX
+           
                 let formattedValue = '+7';
                 
                 if (value.length > 1) {
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
 
-        // Фокус/блюр
+
         const inputs = form.querySelectorAll("input, textarea");
         inputs.forEach((input) => {
             input.addEventListener("focus", handleInputFocus);
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const type = field.type;
             const isRequired = field.hasAttribute('required');
 
-            // Для необязательных полей проверяем только если есть значение
+     
             if (!isRequired && value === '') {
                 return true;
             }
@@ -103,13 +103,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 return true;
             }
 
-            // Проверка обязательных полей
+        
             if (isRequired && !value) {
                 addError(field, "Это поле обязательно для заполнения");
                 return false;
             }
 
-            // Специфичные проверки
+        
             switch(name) {
                 case "email":
                     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {

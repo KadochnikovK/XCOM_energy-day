@@ -8,6 +8,7 @@
 
   <link rel="stylesheet" href="assets/plugins/animations/animations.css" />
   <link rel="stylesheet" href="./assets/plugins/swiper/swiper.css" />
+  <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="assets/style.css" />
 
   <script src="./assets/plugins/swiper/swiper.js"></script>
@@ -46,21 +47,26 @@
   <main>
     <section class="container hero">
       <div class="container__content hero__content">
-        <p class="paragraph hero__info outline-text" style="z-index: 2">2026</p>
+        <img class="before-lg hero__logo" src="assets/images/logo.svg" alt="XCOM" />
+        <p class="paragraph hero__info outline-text hero__info--important" style="z-index: 2">2026</p>
         <h1 class="headline hero__headline" style="z-index: 2">Energy Day</h1>
         <p class="paragraph hero__info" style="z-index: 2">20 марта ◦ 11:00 ◦ 2025</p>
         <div class="hero__button-block">
           <a href="#registration" class="button hero__button">
             <span class="button__text">Зарегистрироваться</span>
           </a>
-          <img src="assets/images/logo.svg" alt="XCOM" />
+          <img class="after-lg" src="assets/images/logo.svg" alt="XCOM" />
         </div>
+
+      </div>
+      <div class="hero__menu-btn before-lg">
+        <i class="fas fa-chevron-right fa-rotate-90"></i>
       </div>
     </section>
     <section class="container schedule" id="schedule">
       <h2 class="headline schedule__headline">Программа и тематика</h2>
       <div class="container__content schedule__content">
-        <div class="schedule__cards">
+        <div class="schedule__cards after-lg">
           <div class="schedule__card schedule__card--image">
             <div class="schedule__card-headline">Основная тематика: </div>
             <div class="schedule__card-text">
@@ -79,6 +85,47 @@
             </div>
           </div>
         </div>
+
+        <div class="schedule__slider swiper before-lg">
+          <div class="swiper-wrapper">
+
+            <div class="schedule__card schedule__card-swiper swiper-slide">
+              <div class="schedule__card-headline">Основная тематика: </div>
+              <div class="schedule__card-text">
+                Глубокий анализ проблематики <strong>импортозамещения</strong> программного обеспечения,
+                <strong>стратегии виртуализации</strong>
+                критической инфраструктуры и практического <strong>внедрения искусственного интеллекта</strong> в
+                бизнес-процессы топливно-энергетического комплекса
+              </div>
+              <div class="navigation schedule__card-navigation">
+                <span class="navigation__nav-arrow navigation__nav-prev schedule__card-arrow">
+                  <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="navigation__nav-arrow navigation__nav-next schedule__card-arrow">
+                  <i class="fas fa-chevron-right"></i>
+                </span>
+              </div>
+            </div>
+            <div class="schedule__card schedule__card-swiper swiper-slide">
+              <div class="schedule__card-headline">Для чего мероприятие?</div>
+              <div class="schedule__card-text">
+                Мероприятие создано как экспертная площадка для открытого диалога между первыми лицами рынка. В фокусе —
+                обмен реальным опытом, обсуждение вызовов и поиск эффективных решений  Ваше
+                участие позволит не только получить актуальные инсайты из первых рук, но и напрямую повлиять на
+                дискуссию
+                о технологическом будущем отрасли
+              </div>
+              <div class="navigation schedule__card-navigation">
+                <span class="navigation__nav-arrow navigation__nav-prev schedule__card-arrow">
+                  <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="navigation__nav-arrow navigation__nav-next schedule__card-arrow">
+                  <i class="fas fa-chevron-right"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="schedule__offer">
           <p class="schedule__offer-text">
             Закрытая конференция<br />
@@ -88,7 +135,7 @@
             <span class="button__text">Зарегистрироваться</span>
           </a>
         </div>
-        <div class="schedule__table">
+        <div class="schedule__table after-lg">
           <div class="schedule__row">
             <div class="schedule__cell schedule__cell--time">10:00-11:00</div>
             <div class="schedule__cell schedule__cell--description">Приветсвенное слово X-Com</div>
@@ -122,7 +169,109 @@
             <div class="schedule__cell schedule__cell--description">Основы</div>
           </div>
         </div>
+        <div class="swiper schedule__table-slider before-lg">
+          <div class="swiper-wrapper">
+            <div class="schedule__row schedule__row--swiper swiper-slide">
+              <div class="schedule__cell schedule__cell--time">
+                <span class="navigation__nav-arrow navigation__nav-prev">
+                  <i class="fas fa-chevron-left"></i>
+                </span>
+                10:00-11:00
+                <span class="navigation__nav-arrow navigation__nav-next">
+                  <i class="fas fa-chevron-right"></i>
+                </span>
+              </div>
+              <div class="schedule__cell schedule__cell--description">Приветсвенное слово X-Com</div>
+            </div>
+            <div class="schedule__row schedule__row--swiper swiper-slide">
+              <div class="schedule__cell schedule__cell--time">
+                <span class="navigation__nav-arrow navigation__nav-prev">
+                  <i class="fas fa-chevron-left"></i>
+                </span>
+                10:00-11:00
+                <span class="navigation__nav-arrow navigation__nav-next">
+                  <i class="fas fa-chevron-right"></i>
+                </span>
+              </div>
+              <div class="schedule__cell schedule__cell--description">Основы того-то того-то</div>
+            </div>
+            <div class="schedule__row schedule__row--swiper swiper-slide">
+              <div class="schedule__cell schedule__cell--time">
+                <span class="navigation__nav-arrow navigation__nav-prev">
+                  <i class="fas fa-chevron-left"></i>
+                </span>
+                10:00-11:00
+                <span class="navigation__nav-arrow navigation__nav-next">
+                  <i class="fas fa-chevron-right"></i>
+                </span>
+              </div>
+              <div class="schedule__cell schedule__cell--description">Основы</div>
+            </div>
+            <div class="schedule__row schedule__row--swiper swiper-slide">
+              <div class="schedule__cell schedule__cell--time">
+                <span class="navigation__nav-arrow navigation__nav-prev">
+                  <i class="fas fa-chevron-left"></i>
+                </span>
+                10:00-11:00
+                <span class="navigation__nav-arrow navigation__nav-next">
+                  <i class="fas fa-chevron-right"></i>
+                </span>
+              </div>
+              <div class="schedule__cell schedule__cell--description">Основы</div>
+            </div>
+            <div class="schedule__row schedule__row--swiper swiper-slide">
+              <div class="schedule__cell schedule__cell--time">
+                <span class="navigation__nav-arrow navigation__nav-prev">
+                  <i class="fas fa-chevron-left"></i>
+                </span>
+                10:00-11:00
+                <span class="navigation__nav-arrow navigation__nav-next">
+                  <i class="fas fa-chevron-right"></i>
+                </span>
+              </div>
+              <div class="schedule__cell schedule__cell--description">Основы</div>
+            </div>
+            <div class="schedule__row schedule__row--swiper swiper-slide">
+              <div class="schedule__cell schedule__cell--time">
+                <span class="navigation__nav-arrow navigation__nav-prev">
+                  <i class="fas fa-chevron-left"></i>
+                </span>
+                10:00-11:00
+                <span class="navigation__nav-arrow navigation__nav-next">
+                  <i class="fas fa-chevron-right"></i>
+                </span>
+              </div>
+              <div class="schedule__cell schedule__cell--description">Основы</div>
+            </div>
+            <div class="schedule__row schedule__row--swiper swiper-slide">
+              <div class="schedule__cell schedule__cell--time">
+                <span class="navigation__nav-arrow navigation__nav-prev">
+                  <i class="fas fa-chevron-left"></i>
+                </span>
+                10:00-11:00
+                <span class="navigation__nav-arrow navigation__nav-next">
+                  <i class="fas fa-chevron-right"></i>
+                </span>
+              </div>
+              <div class="schedule__cell schedule__cell--description">Основы</div>
+            </div>
+            <div class="schedule__row schedule__row--swiper swiper-slide">
+              <div class="schedule__cell schedule__cell--time">
+                <span class="navigation__nav-arrow navigation__nav-prev">
+                  <i class="fas fa-chevron-left"></i>
+                </span>
+                10:00-11:00
+                <span class="navigation__nav-arrow navigation__nav-next">
+                  <i class="fas fa-chevron-right"></i>
+                </span>
+              </div>
+              <div class="schedule__cell schedule__cell--description">Основы</div>
+            </div>
+          </div>
+
+        </div>
       </div>
+
 
     </section>
     <section class="location container" id="location">
@@ -295,7 +444,8 @@
 
     <section class="organizer container">
       <div class="organizer__content container__content">
-        <div class="organizer__grid">
+        <h2 class="headline organizer__headline">Организатор</h2>
+        <div class="organizer__grid after-lg">
           <div class="organizer__item">
             <p class="organizer__item-text organizer__item-text--big">Входим в ТОП-25</p>
             <p class="organizer__item-text">крупнейших ИТ-компаний России</p>
@@ -348,7 +498,70 @@
             </p>
           </div>
         </div>
+
+        <div class="organizer__swiper swiper before-lg">
+
+          <div class="swiper-wrapper">
+            <div class="organizer__item swiper-slide">
+              <p class="organizer__item-text organizer__item-text--big">Входим в ТОП-25</p>
+              <p class="organizer__item-text">крупнейших ИТ-компаний России</p>
+              <p class="organizer__item-text organizer__item-text--mini">(*по версии CNews Analytics)</p>
+            </div>
+            <div class="organizer__item swiper-slide">
+              <p class="organizer__item-text organizer__item-text--big">Входим в ТОП-25</p>
+              <p class="organizer__item-text">лучших системных интеграторов России 2024</p>
+              <p class="organizer__item-text organizer__item-text--mini">(*по версии IT Channel News)</p>
+            </div>
+            <div class="organizer__item organizer__item--bright swiper-slide">
+              <p class="organizer__item-text organizer__item-text--big">Многопрофильный</p>
+              <p class="organizer__item-text organizer__item-text--color">ИТ-холдинг, с 1994 года на российском рынке
+              </p>
+
+            </div>
+            <div class="organizer__item swiper-slide">
+              <p class="organizer__item-text">На рынке цифровизации и цифровой трансформации предприятий нефтегазовой
+                отрасли X-Com —</p>
+              <p class="organizer__item-text organizer__item-text--big">более 15 лет</p>
+            </div>
+            <div class="organizer__item organizer__item--center swiper-slide">
+              <img src="assets/images/logo.svg" style="max-width: 50%; height: 100%;" alt="">
+            </div>
+            <div class="organizer__item organizer__item--bright swiper-slide">
+              <p class="organizer__item-text organizer__item-text--color">Реализованы десятки интеграционных проектов
+                различной сложности по всей территории РФ для крупнейших отраслеобразующих предприятий:</p>
+              <img src="assets/images/star.svg" class="organizer__star" alt="">
+              <p class="organizer__item-text">«Газпром», «Лукойл», «Роснефть», «Сургутнефтегаз», НОВАТЭК, «Ямал СПГ» и
+                др.
+              </p>
+            </div>
+            <div class="organizer__item swiper-slide">
+              <p class="organizer__item-text">Решения X-Com для газо-нефтедобычи
+                и нефтепереработки на всех этапах производства обеспечивают:</p>
+
+              <ul class="organizer__list">
+                <li class="organizer__item-text">снижение эксплуатационных расходов,</li>
+                <li class="organizer__item-text">сокращение незапланированных остановок</li>
+                <li class="organizer__item-text">добычи и переработки ресурсов,</li>
+                <li class="organizer__item-text">повышение энергоэффективности НПЗ и эффективности рабочей силы</li>
+              </ul>
+              </p>
+            </div>
+            <div class="organizer__item swiper-slide">
+              <p class="organizer__item-text">Основу составляют технологии искусственного интеллекта и роботизации
+                рабочих
+                процессов,
+                а также применение «озеро данных», позволяет структурировать и эффективно анализировать разнородную
+                информацию</p>
+              <p class="organizer__item-text">Сервисное подразделение X-Com в тесном сотрудничестве с ИТ-подразделениями
+                заказчиков обеспечивает обслуживание и техническую поддержку ИТ-систем и решений вплоть до 24/7/365
+              </p>
+            </div>
+          </div>
+        </div>
+
       </div>
+
+
     </section>
   </main>
   <footer class="footer container" id="contacts">

@@ -78,7 +78,7 @@ a {
 
 .unite {
     display: flex;
-    // gap: var(--size-sm);
+   
     width: 100%;
 
     &--column {
@@ -127,7 +127,7 @@ a {
 .connector-line {
     stroke: rgba(255, 255, 255, 0.9);
     stroke-width: 1;
-    /* Тонкие линии */
+
     stroke-linecap: round;
     fill: none;
 }
@@ -137,34 +137,35 @@ a {
     gap: var(--size-xxxs);
     cursor: pointer;
     transition: transform 0.2s ease;
-}
 
-&:hover {
-    transform: scale(1.1);
-}
 
-&:active {
-    transform: scale(0.95);
-}
-
-&__circle {
-    border-radius: 10pc;
-    width: var(--size-xs);
-    height: var(--size-xs);
-
-    &--blue {
-        background-color: #1a4784;
+    &:hover {
+        transform: scale(1.1);
     }
 
-    &--green {
-        background-color: #73ad56;
+    &:active {
+        transform: scale(0.95);
     }
 
-    &--red {
-        background-color: #850000;
+    &__circle {
+        border-radius: 10pc;
+        width: var(--size-xs);
+        height: var(--size-xs);
+
+        &--blue {
+            background-color: #1a4784;
+        }
+
+        &--green {
+            background-color: #73ad56;
+        }
+
+        &--red {
+            background-color: #850000;
+        }
     }
 }
-}
+
 
 .before-lg {
     display: flex !important;
@@ -179,5 +180,15 @@ a {
 
     @include lg {
         display: flex !important;
+    }
+}
+
+.navigation {
+    margin-inline: auto;
+
+    &__nav-arrow * {
+
+        color: var(--color-bright);
+        font-size: var(--size-sm);
     }
 }

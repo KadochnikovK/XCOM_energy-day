@@ -808,6 +808,10 @@ a {
   font-size: var(--size-xs);
   line-height: 1.2;
 }
+.schedule__card-text strong {
+  font-weight: 700;
+  color: var(--color-bright);
+}
 .schedule__offer {
   position: relative;
   display: flex;
@@ -1345,4 +1349,4 @@ a {
   max-width: 550px;
   color: var(--color-bright);
   width: 100%;
-}/*# sourceMappingURL=style.css.map */
+}

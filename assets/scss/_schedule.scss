@@ -1,9 +1,8 @@
 .schedule {
- 
     position: relative;
 
     overflow: hidden;
-   
+
     position: relative;
     z-index: 2;
 
@@ -24,8 +23,6 @@
             z-index: 0;
         }
     }
-
-
 
     &__dot {
         position: absolute;
@@ -71,7 +68,7 @@
             padding-right: 40%;
 
             &::after {
-                content: '';
+                content: "";
                 position: absolute;
                 top: 50%;
                 width: 400px;
@@ -86,11 +83,9 @@
                 padding-right: 17%;
 
                 &::after {
-
                     width: 600px;
                     height: 330px;
                     transform: translateX(75px) translateY(-50%);
-                    ;
                     background: url(./images/item.svg) right/contain no-repeat;
                 }
             }
@@ -106,7 +101,6 @@
     }
 
     &__card-navigation {
-
         display: flex;
         gap: var(--size-md);
         justify-content: center;
@@ -125,12 +119,9 @@
         display: flex;
         flex-direction: column;
         position: relative;
-
-
     }
 
     &__row {
-
         display: flex;
 
         &:not(:nth-last-child(1)) {
@@ -161,11 +152,7 @@
                 justify-content: center;
             }
         }
-
-
     }
-
-
 
     &__cell {
         padding: var(--size-xxxs);
@@ -205,6 +192,11 @@
         color: var(--color-bright);
         font-size: var(--size-xs);
         line-height: 1.2;
+
+        strong {
+            font-weight: 700;
+            color: var(--color-bright);
+        }
     }
 
     &__offer {
@@ -221,14 +213,12 @@
             content: "";
             position: absolute;
             inset: 0;
-       
+
             background: url(./images/background.png) center/cover no-repeat;
             filter: blur(100px);
- 
-            z-index: -1;
-       
 
-         
+            z-index: -1;
+
             transform: scale(1.05);
         }
     }
@@ -241,8 +231,7 @@
 
     &__slider {
         .schedule__card-headline {
-        margin-bottom: var(--size-sm);    
+            margin-bottom: var(--size-sm);
         }
     }
-
 }

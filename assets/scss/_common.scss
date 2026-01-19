@@ -45,6 +45,7 @@ a {
     padding: var(--size-xs);
     gap: var(--size-sm);
 
+
     @include xl {
         padding: var(--size-lg);
     }

@@ -319,10 +319,6 @@ a {
   max-width: 550px;
   position: relative;
   margin: var(--size-lg);
-  opacity: 0;
-}
-.modal__window--active {
-  opacity: 1;
 }
 .modal__close {
   position: absolute;

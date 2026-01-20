@@ -32,20 +32,20 @@ document.addEventListener("DOMContentLoaded", function () {
             errorElement.style.display = "block";
         }
 
-   
+
         const phoneInput = form.querySelector('input[name="phone"]');
         if (phoneInput) {
-            phoneInput.addEventListener('input', function(e) {
+            phoneInput.addEventListener('input', function (e) {
                 let value = e.target.value.replace(/\D/g, '');
-                
+
                 if (value.length === 0) {
                     e.target.value = '';
                     return;
                 }
-                
-           
+
+
                 let formattedValue = '+7';
-                
+
                 if (value.length > 1) {
                     formattedValue += ' (' + value.substring(1, 4);
                 }
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (value.length >= 10) {
                     formattedValue += '-' + value.substring(9, 11);
                 }
-                
+
                 e.target.value = formattedValue;
             });
         }
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const type = field.type;
             const isRequired = field.hasAttribute('required');
 
-     
+
             if (!isRequired && value === '') {
                 return true;
             }
@@ -103,21 +103,21 @@ document.addEventListener("DOMContentLoaded", function () {
                 return true;
             }
 
-        
+
             if (isRequired && !value) {
                 addError(field, "Это поле обязательно для заполнения");
                 return false;
             }
 
-        
-            switch(name) {
+
+            switch (name) {
                 case "email":
                     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
                         addError(field, "Введите корректный email");
                         return false;
                     }
                     break;
-                    
+
                 case "phone":
                     const phoneDigits = value.replace(/\D/g, '');
                     if (phoneDigits.length !== 11) {
@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         return false;
                     }
                     break;
-                    
+
                 case "taxId":
                     if (value && !/^\d+$/.test(value)) {
                         addError(field, "ИНН должен содержать только цифры");
@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         return false;
                     }
                     break;
-                    
+
                 case "surname":
                 case "name":
                     if (value && !/^[а-яА-ЯёЁa-zA-Z\- ]+$/.test(value)) {
@@ -238,22 +238,22 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(() => {
             modal.classList.remove("animate__fadeIn", "animate__fadeOut");
             modalWindow.classList.remove("animate__fadeInUp", "animate__fadeOutDown");
-
+            modalWindow.classList.add("animate__fadeInUp");
             modal.classList.add("animate__fadeIn");
-            modalWindow.classList.add("animate__fadeInUp", "modal__window--active");
+
         }, 10);
 
         function closeModal() {
             modal.classList.remove("animate__fadeIn");
             modalWindow.classList.remove("animate__fadeInUp");
-
-            modal.classList.add("animate__fadeOut");
             modalWindow.classList.add("animate__fadeOutDown");
+            modal.classList.add("animate__fadeOut");
+
 
             setTimeout(() => {
                 modal.style.display = "none";
                 modal.classList.remove("animate__fadeOut");
-                modalWindow.classList.remove("animate__fadeOutDown", "modal__window--active");
+                modalWindow.classList.remove("animate__fadeOutDown");
             }, 500);
         }
 

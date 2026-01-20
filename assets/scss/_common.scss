@@ -47,11 +47,11 @@ a {
 .container {
     display: flex;
     flex-direction: column;
-    padding: var(--size-xs);
+    padding: var(--size-xs) !important;
     gap: var(--size-sm);
 
     @include xl {
-        padding: var(--size-lg);
+        padding: var(--size-lg) !important;
     }
 }
 

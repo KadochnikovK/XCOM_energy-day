@@ -6,6 +6,7 @@
     position: relative;
     align-items: center;
     border-radius: 0 0 var(--size-sm) var(--size-sm);
+    min-height: 700px;
 
     &__logo {
         max-height: var(--size-lg);

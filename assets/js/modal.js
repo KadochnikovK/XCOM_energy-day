@@ -240,7 +240,7 @@ document.addEventListener("DOMContentLoaded", function () {
             modalWindow.classList.remove("animate__fadeInUp", "animate__fadeOutDown");
 
             modal.classList.add("animate__fadeIn");
-            modalWindow.classList.add("animate__fadeInUp");
+            modalWindow.classList.add("animate__fadeInUp", "modal__window--active");
         }, 10);
 
         function closeModal() {
@@ -253,7 +253,7 @@ document.addEventListener("DOMContentLoaded", function () {
             setTimeout(() => {
                 modal.style.display = "none";
                 modal.classList.remove("animate__fadeOut");
-                modalWindow.classList.remove("animate__fadeOutDown");
+                modalWindow.classList.remove("animate__fadeOutDown", "modal__window--active");
             }, 500);
         }
 

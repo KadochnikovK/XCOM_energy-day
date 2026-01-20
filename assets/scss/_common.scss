@@ -183,6 +183,9 @@ a {
 
     @include lg {
         display: flex !important;
+        &.organizer__grid {
+            display: grid !important;
+        }
     }
 }
 

@@ -17,14 +17,25 @@
         height: 40vh !important;
         border-radius: var(--size-md);
         padding: var(--size-xxxs);
-    
+
         text-align: center;
         display: flex !important;
         flex-direction: column;
         position: relative;
         transition: all 0.3s ease-in-out;
-        background: url(./images/background.png) center/cover no-repeat;
+        // background: url(./images/background.png) center/cover no-repeat;
 
+        &:nth-child(1n) {
+            background: url(./images/background.png) left no-repeat;
+        }
+
+        &:nth-child(2n) {
+            background: url(./images/background.png) center no-repeat;
+        }
+
+        &:nth-child(3n) {
+            background: url(./images/background.png) right no-repeat;
+        }
         &--active {
             background-color: white !important;
             color: var(--color-main);
@@ -55,8 +66,6 @@
                 color: var(--color-main);
             }
         }
-
-       
     }
 
     &__image-block {
@@ -69,7 +78,7 @@
 
     &__image {
         height: 100%;
-  
+
         object-fit: contain;
     }
 

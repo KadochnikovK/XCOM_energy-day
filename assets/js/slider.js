@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 },
                 speed: 800,
             },
-            1080: {
+            768: {
                 slidesPerView: 2,
                 freeMode: {
                     enabled: true,
@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     momentumRatio: 2,
                 },
             },
-            1360: {
+            1000: {
                 slidesPerView: 3,
                 freeMode: {
                     enabled: true,
@@ -159,7 +159,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         touchRatio: 0.6,
         touchAngle: 45,
-
+        navigation: {
+            nextEl: '.partners__slider .navigation__nav-next',
+            prevEl: '.partners__slider .navigation__nav-prev',
+        },
         freeMode: {
             enabled: true,
             momentum: true,
@@ -184,7 +187,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 },
                 speed: 800,
             },
-            1080: {
+            768: {
                 slidesPerView: 2,
                 freeMode: {
                     enabled: true,
@@ -192,7 +195,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     momentumRatio: 2,
                 },
             },
-            1360: {
+            1000: {
                 slidesPerView: 3,
                 freeMode: {
                     enabled: true,
@@ -322,7 +325,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("Слайдер создан, создаем слушатель");
 
     document.addEventListener("click", function (e) {
-      
+
         if (e.target.closest(".advantages__wrapper")) {
             console.log("Клик по врапперу, переключаем слайд");
             advantagesSwiper.slideNext();
@@ -337,33 +340,33 @@ document.addEventListener("DOMContentLoaded", function () {
         loop: true,
         speed: 600,
 
-      
+
         navigation: {
             nextEl: '.schedule__slider .navigation__nav-next',
             prevEl: '.schedule__slider .navigation__nav-prev',
         },
 
-  
+
         effect: 'slide',
 
-        
+
         simulateTouch: true,
         grabCursor: true,
         touchRatio: 1,
         touchAngle: 45,
         allowTouchMove: true,
 
-        
+
         resistance: true,
         resistanceRatio: 0.6,
 
-    
+
         autoplay: {
             delay: 5000,
             disableOnInteraction: true,
         },
 
-        
+
         breakpoints: {
             320: {
                 slidesPerView: 1,
@@ -386,12 +389,12 @@ document.addEventListener("DOMContentLoaded", function () {
             init: function () {
                 console.log("Schedule slider initialized");
 
-       
+
             },
             slideChange: function () {
                 console.log("Schedule slider changed to slide:", this.realIndex);
 
-           
+
             }
         }
     });
@@ -429,7 +432,7 @@ document.addEventListener("DOMContentLoaded", function () {
             prevEl: '.schedule__table-slider .navigation__nav-prev',
         },
 
-    
+
         effect: 'slide',
 
 
@@ -439,7 +442,7 @@ document.addEventListener("DOMContentLoaded", function () {
         touchAngle: 45,
         allowTouchMove: true,
 
-  
+
         resistance: true,
         resistanceRatio: 0.6,
 
@@ -502,13 +505,13 @@ document.addEventListener("DOMContentLoaded", function () {
         loop: true,
         speed: 600,
 
-       
+
         navigation: {
             nextEl: '.organizer__swiper .navigation__nav-next',
             prevEl: '.organizer__swiper .navigation__nav-prev',
         },
 
-   
+
         effect: 'slide',
 
 
@@ -518,7 +521,7 @@ document.addEventListener("DOMContentLoaded", function () {
         touchAngle: 45,
         allowTouchMove: true,
 
-    
+
         resistance: true,
         resistanceRatio: 0.6,
 
@@ -546,7 +549,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         },
 
-      
+
         on: {
             init: function () {
                 console.log("Schedule slider initialized");

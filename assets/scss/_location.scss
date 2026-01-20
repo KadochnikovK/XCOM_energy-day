@@ -6,7 +6,7 @@
     &__map {
         height: calc((1vh + 1vw) * 25);
         width: 100%;
-        border-radius: var(--size-sm);
+         border-radius: var(--size-lg);;
         overflow: hidden;
         z-index: 3;
         background: url(./images/background.png) center/cover no-repeat;
@@ -26,6 +26,6 @@
 .map {
     width: 100%;
     height: calc(100% - var(--size-xl));
-    border-radius: var(--size-sm);
+     border-radius: var(--size-lg);;
     overflow: hidden;
 }

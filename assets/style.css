@@ -249,6 +249,9 @@ a {
   .after-lg {
     display: flex !important;
   }
+  .after-lg.organizer__grid {
+    display: grid !important;
+  }
 }
 
 .navigation {
@@ -315,7 +318,7 @@ a {
 .modal__window {
   padding: var(--size-xl) var(--size-lg);
   background-color: var(--color-bright);
-  border-radius: var(--size-sm);
+  border-radius: var(--size-lg);
   max-width: 550px;
   position: relative;
   margin: var(--size-lg);
@@ -691,7 +694,7 @@ a {
 }
 .schedule__card {
   background: url(./images/background.png) center/cover no-repeat;
-  border-radius: var(--size-sm);
+  border-radius: var(--size-lg);
   padding: var(--size-lg) var(--size-sm);
   display: flex;
   flex-direction: column;
@@ -736,7 +739,7 @@ a {
 }
 .schedule__card-navigation {
   display: flex;
-  gap: var(--size-md);
+  gap: var(--size-xxl);
   justify-content: center;
   margin-top: var(--size-sm);
 }
@@ -746,7 +749,7 @@ a {
 }
 .schedule__table {
   background: url(./images/background.png) center/cover no-repeat;
-  border-radius: var(--size-sm);
+  border-radius: var(--size-lg);
   padding: var(--size-lg) var(--size-sm);
   display: flex;
   flex-direction: column;
@@ -766,7 +769,7 @@ a {
   align-items: center;
   border: none !important;
   background: url(./images/background.png) center/cover no-repeat;
-  border-radius: var(--size-sm);
+  border-radius: var(--size-lg);
   padding: var(--size-lg) var(--size-sm);
   display: flex;
   flex-direction: column;
@@ -774,10 +777,12 @@ a {
 }
 .schedule__row--swiper .schedule__cell--time {
   border: none;
+  font-size: var(--size-xl) !important;
 }
 .schedule__row--swiper .schedule__cell {
   display: flex !important;
   justify-content: center;
+  font-size: var(--size-md);
 }
 .schedule__cell {
   padding: var(--size-xxxs);
@@ -789,8 +794,10 @@ a {
   text-align: center;
 }
 .schedule__cell--time {
-  font-size: var(--size-sm);
   border-right: 1px solid var(--color-bright);
+}
+.schedule__cell--time * {
+  font-size: var(--size-lg);
 }
 .schedule__cell--time .navigation__nav-next {
   margin-left: auto;
@@ -849,7 +856,7 @@ a {
 .location__map {
   height: calc((1vh + 1vw) * 25);
   width: 100%;
-  border-radius: var(--size-sm);
+  border-radius: var(--size-lg);
   overflow: hidden;
   z-index: 3;
   background: url(./images/background.png) center/cover no-repeat;
@@ -866,7 +873,7 @@ a {
 .map {
   width: 100%;
   height: calc(100% - var(--size-xl));
-  border-radius: var(--size-sm);
+  border-radius: var(--size-lg);
   overflow: hidden;
 }
 
@@ -878,10 +885,41 @@ a {
 }
 .partners__slider {
   overflow: visible !important;
+  position: relative;
+}
+.partners__slider .navigation__nav-arrow {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .partners__slider .navigation__nav-arrow {
+    display: block;
+  }
+}
+.partners__slider .navigation__nav-prev {
+  position: absolute;
+  left: 2%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9;
+}
+.partners__slider .navigation__nav-prev * {
+  font-size: var(--size-lg);
+  color: var(--color-dark);
+}
+.partners__slider .navigation__nav-next {
+  position: absolute;
+  right: 2%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9;
+}
+.partners__slider .navigation__nav-next * {
+  font-size: var(--size-lg);
+  color: var(--color-dark);
 }
 .partners__slide {
   height: 15vh;
-  border-radius: var(--size-sm);
+  border-radius: var(--size-lg);
   background-color: var(--color-bright);
   display: flex !important;
   align-items: center;
@@ -915,7 +953,15 @@ a {
   flex-direction: column;
   position: relative;
   transition: all 0.3s ease-in-out;
-  background: url(./images/background.png) center/cover no-repeat;
+}
+.speakers__slide:nth-child(1n) {
+  background: url(./images/background.png) left no-repeat;
+}
+.speakers__slide:nth-child(2n) {
+  background: url(./images/background.png) center no-repeat;
+}
+.speakers__slide:nth-child(3n) {
+  background: url(./images/background.png) right no-repeat;
 }
 .speakers__slide--active {
   background-color: white !important;
@@ -998,7 +1044,7 @@ a {
   flex-direction: column;
   background: url(./images/background.png) center/cover no-repeat;
   padding: var(--size-sm);
-  border-radius: var(--size-md);
+  border-radius: var(--size-lg);
 }
 .form__inputs {
   display: grid;
@@ -1125,14 +1171,14 @@ a {
   margin-bottom: var(--size-sm);
 }
 .organizer__grid {
-  display: grid !important;
+  display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: var(--size-xxs);
 }
 .organizer__item {
-  grid-column: span 4 !important;
+  grid-column: span 4;
   background: url(./images/background.png) center/cover no-repeat;
-  border-radius: var(--size-sm);
+  border-radius: var(--size-lg);
   padding: var(--size-sm) var(--size-sm);
   display: flex;
   flex-direction: column;
@@ -1141,10 +1187,45 @@ a {
 .organizer__item * {
   color: var(--color-bright);
 }
+.organizer__item--2-1 {
+  grid-column: span 6;
+}
+@media (min-width: 1440px) {
+  .organizer__item--2-1 {
+    grid-column: span 3;
+  }
+}
+.organizer__item--2-2 {
+  grid-column: span 6;
+}
+@media (min-width: 1440px) {
+  .organizer__item--2-2 {
+    grid-column: span 9;
+  }
+}
+.organizer__item--3-1 {
+  grid-column: span 6;
+}
+@media (min-width: 1440px) {
+  .organizer__item--3-1 {
+    grid-column: span 7;
+  }
+}
+.organizer__item--3-2 {
+  grid-column: span 6;
+}
+@media (min-width: 1440px) {
+  .organizer__item--3-2 {
+    grid-column: span 5;
+  }
+}
 .organizer__item--center {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+.organizer__item--full {
+  grid-column: span 12;
 }
 .organizer__item--bright {
   border: 4px solid var(--color-main);
@@ -1191,12 +1272,25 @@ a {
 .organizer__swiper .organizer__item {
   grid-column: none;
   background: url(./images/background.png) center/cover no-repeat;
-  border-radius: var(--size-sm);
-  padding: var(--size-sm) var(--size-sm);
+  border-radius: var(--size-lg);
+  padding: var(--size-sm) var(--size-lg);
   flex-basis: auto;
   max-width: none;
   display: block !important;
   height: 100%;
+  position: relative;
+}
+.organizer__swiper .organizer__item .navigation__nav-prev {
+  position: absolute;
+  left: 2%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.organizer__swiper .organizer__item .navigation__nav-next {
+  position: absolute;
+  right: 2%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .footer {

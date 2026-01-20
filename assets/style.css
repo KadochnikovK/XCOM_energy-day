@@ -1190,7 +1190,7 @@ a {
   margin-left: var(--size-xxs);
 }
 .organizer__item-text {
-  font-size: var(--size-xs);
+  font-size: var(--size-sm);
   font-weight: 700;
   line-height: 1.1;
 }
@@ -1200,7 +1200,7 @@ a {
   }
 }
 .organizer__item-text--big {
-  font-size: var(--size-sm);
+  font-size: var(--size-md);
 }
 @media (min-width: 1224px) {
   .organizer__item-text--big {
@@ -1208,7 +1208,7 @@ a {
   }
 }
 .organizer__item-text--mini {
-  font-size: var(--size-xxxs);
+  font-size: var(--size-xxs);
 }
 @media (min-width: 1224px) {
   .organizer__item-text--mini {

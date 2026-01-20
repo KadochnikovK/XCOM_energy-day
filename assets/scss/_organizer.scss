@@ -80,7 +80,7 @@
     }
 
     &__item-text {
-        font-size: var(--size-xs);
+        font-size: var(--size-sm);
         font-weight: 700;
         line-height: 1.1;
 
@@ -89,7 +89,7 @@
         }
 
         &--big {
-            font-size: var(--size-sm);
+            font-size: var(--size-md);
 
             @include lg {
                 font-size: calc(var(--size-sm) * 0.8);
@@ -97,7 +97,7 @@
         }
 
         &--mini {
-            font-size: var(--size-xxxs);
+            font-size: var(--size-xxs);
 
             @include lg {
                 font-size: calc(var(--size-xxxs) * 0.8);

@@ -379,7 +379,6 @@ a {
   position: absolute;
   left: 0;
   right: 0;
-  top: 20px;
   z-index: 3;
   background-color: var(--color-bright);
   border-radius: 0 0 var(--size-xxs) var(--size-xxs);

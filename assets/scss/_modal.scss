@@ -14,17 +14,21 @@
     &__window {
         padding: var(--size-xl) var(--size-lg);
         background-color: var(--color-bright);
-         border-radius: var(--size-lg);;
+        border-radius: var(--size-lg);
         max-width: 550px;
         position: relative;
         margin: var(--size-lg);
- 
+        opacity: 0;
+
+        &--active {
+            opacity: 1;
+        }
     }
 
     &__close {
         position: absolute;
-        right: 20px;
-        top: 20px;
+        right: var(--size-sm);
+        top: var(--size-sm);
 
         display: flex;
         flex-direction: column;
@@ -59,7 +63,6 @@
         gap: var(--size-lg);
         color: var(--color-dark);
         text-align: center;
-
     }
 
     &__headline {
@@ -67,7 +70,6 @@
         color: var(--color-main);
         line-height: 1.2;
         font-weight: 800;
-
     }
 
     &__text {
@@ -78,6 +80,6 @@
 
     &__button {
         width: max-content;
-       
+        background-color: var(--color-main);
     }
 }

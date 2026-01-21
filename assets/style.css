@@ -322,11 +322,15 @@ a {
   max-width: 550px;
   position: relative;
   margin: var(--size-lg);
+  opacity: 0;
+}
+.modal__window--active {
+  opacity: 1;
 }
 .modal__close {
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: var(--size-sm);
+  top: var(--size-sm);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -371,6 +375,7 @@ a {
 .modal__button {
   width: -moz-max-content;
   width: max-content;
+  background-color: var(--color-main);
 }
 
 .header {

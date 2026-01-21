@@ -238,14 +238,14 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(() => {
             modal.classList.remove("animate__fadeIn", "animate__fadeOut");
             modalWindow.classList.remove("animate__fadeInUp", "animate__fadeOutDown");
-            modalWindow.classList.add("animate__fadeInUp");
+            modalWindow.classList.add("animate__fadeInUp", 'modal__window--active');
             modal.classList.add("animate__fadeIn");
 
         }, 10);
 
         function closeModal() {
             modal.classList.remove("animate__fadeIn");
-            modalWindow.classList.remove("animate__fadeInUp");
+            modalWindow.classList.remove("animate__fadeInUp", 'modal__window--active');
             modalWindow.classList.add("animate__fadeOutDown");
             modal.classList.add("animate__fadeOut");
 

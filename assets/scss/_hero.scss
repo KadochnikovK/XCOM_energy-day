@@ -1,25 +1,23 @@
 .hero {
- 
     background: url(./images/background.png) center/cover no-repeat;
 
     overflow: hidden;
     position: relative;
     align-items: center;
     border-radius: 0 0 var(--size-sm) var(--size-sm);
-    min-height: 700px;
+    min-height: 800px;
 
     &__logo {
         max-height: var(--size-lg);
-
     }
 
     &__content {
         display: flex;
         flex-direction: column;
-
+        margin-top: auto;
         justify-content: center;
         width: 100%;
-   
+
         gap: var(--size-sm);
         color: var(--color-bright);
         position: relative;
@@ -43,31 +41,24 @@
     }
 
     &__info {
-     
         flex-direction: column;
         align-items: center;
         font-size: var(--size-lg);
         gap: var(--size-xxxs);
-   
+
         font-weight: 900;
         text-align: center;
         color: inherit;
 
-
         &--big {
             font-size: var(--size-sm);
         }
-
-
-
-
 
         &--important {
             font-size: calc(var(--size-xl) * 1.4);
 
             @include lg {
                 font-size: var(--size-lg);
-
             }
         }
 
@@ -92,8 +83,6 @@
         @include lg {
             text-align: left;
         }
-
-
     }
 
     &__button-block {
@@ -173,7 +162,7 @@
 
     &__circle {
         position: absolute;
-      
+
         min-width: 500px;
         width: 140vw;
         bottom: 0;
@@ -202,15 +191,14 @@
         position: absolute;
         left: 0;
         right: 0;
-      
+
         z-index: 3;
         bottom: 0;
-    
+
         * {
             color: var(--color-bright);
             font-size: var(--size-lg);
-            transition: all .3s;
+            transition: all 0.3s;
         }
     }
-
 }

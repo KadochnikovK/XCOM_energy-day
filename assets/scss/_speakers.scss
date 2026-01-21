@@ -11,13 +11,15 @@
 
     &__slider {
         overflow: visible !important;
+        // height: auto;
+        height: 50vh;
     }
 
     &__slide {
-        height: 40vh !important;
+        // height: 40vh !important;
         border-radius: var(--size-md);
         padding: var(--size-xxxs);
-
+        height: auto !important;
         text-align: center;
         display: flex !important;
         flex-direction: column;
@@ -69,8 +71,10 @@
     }
 
     &__image-block {
-        height: 60%;
+        height: 50%;
+        min-height: 50%;
         border-radius: var(--size-xs);
+        // aspect-ratio: 2;
         background-color: var(--color-bright);
         // margin-bottom: auto;
         overflow: hidden;
@@ -78,16 +82,20 @@
 
     &__image {
         height: 100%;
-
+        width: 100%;
         object-fit: contain;
     }
 
     &__name {
-        font-size: var(--size-md);
+         font-size: var(--size-md);
         font-weight: 700;
         color: var(--color-bright);
         margin-top: auto;
         margin-bottom: auto;
+
+        @include md {
+            font-size: var(--size-sm);
+        }
     }
 
     &__link {
@@ -99,6 +107,15 @@
 
         &:hover {
             opacity: 0.7;
+        }
+    }
+
+    &__description {
+        font-size: var(--size-sm);
+        color: var(--color-bright);
+
+        @include md {
+             font-size: var(--size-xs);
         }
     }
 

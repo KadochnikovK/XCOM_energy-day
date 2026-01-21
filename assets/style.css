@@ -471,7 +471,7 @@ a {
   position: relative;
   align-items: center;
   border-radius: 0 0 var(--size-sm) var(--size-sm);
-  min-height: 700px;
+  min-height: 800px;
 }
 .hero__logo {
   max-height: var(--size-lg);
@@ -479,6 +479,7 @@ a {
 .hero__content {
   display: flex;
   flex-direction: column;
+  margin-top: auto;
   justify-content: center;
   width: 100%;
   gap: var(--size-sm);
@@ -794,6 +795,7 @@ a {
   text-align: center;
 }
 .schedule__cell--time {
+  font-size: var(--size-md);
   border-right: 1px solid var(--color-bright);
 }
 .schedule__cell--time * {
@@ -943,11 +945,12 @@ a {
 }
 .speakers__slider {
   overflow: visible !important;
+  height: 50vh;
 }
 .speakers__slide {
-  height: 40vh !important;
   border-radius: var(--size-md);
   padding: var(--size-xxxs);
+  height: auto !important;
   text-align: center;
   display: flex !important;
   flex-direction: column;
@@ -989,13 +992,15 @@ a {
   color: var(--color-main);
 }
 .speakers__image-block {
-  height: 60%;
+  height: 50%;
+  min-height: 50%;
   border-radius: var(--size-xs);
   background-color: var(--color-bright);
   overflow: hidden;
 }
 .speakers__image {
   height: 100%;
+  width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -1006,6 +1011,11 @@ a {
   margin-top: auto;
   margin-bottom: auto;
 }
+@media (min-width: 1024px) {
+  .speakers__name {
+    font-size: var(--size-sm);
+  }
+}
 .speakers__link {
   align-items: end;
   font-family: Second;
@@ -1015,6 +1025,15 @@ a {
 }
 .speakers__link:hover {
   opacity: 0.7;
+}
+.speakers__description {
+  font-size: var(--size-sm);
+  color: var(--color-bright);
+}
+@media (min-width: 1024px) {
+  .speakers__description {
+    font-size: var(--size-xs);
+  }
 }
 .speakers__social-links {
   display: none;

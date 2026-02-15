@@ -2,20 +2,11 @@
     min-height: auto;
     position: relative;
     align-items: start;
-    margin-top: var(--size-lg);
+    margin-top: var(--size-md);
+    padding-top: var(--size-lg) !important;
+    background: var(--gradient-main);
 
-    &::before {
-        content: "";
-        position: absolute;
-        inset: -10%;
-        top: var(--size-md);
-
-        background: var(--gradient-main);
-        filter: blur(100px);
-
-        z-index: -1;
-        transform: scale(1.05) scaleY(-1);
-    }
+   
 
     &__content {
         display: grid;

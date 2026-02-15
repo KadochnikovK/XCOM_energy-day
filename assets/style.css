@@ -466,7 +466,7 @@ a {
 @media (min-width: 1224px) {
   .menu__link {
     font-size: var(--size-xxs);
-    color: var(--color-main);
+    color: var(--color-dark);
   }
 }
 
@@ -1357,17 +1357,9 @@ a {
   min-height: auto;
   position: relative;
   align-items: start;
-  margin-top: var(--size-lg);
-}
-.footer::before {
-  content: "";
-  position: absolute;
-  inset: -10%;
-  top: var(--size-md);
+  margin-top: var(--size-md);
+  padding-top: var(--size-lg) !important;
   background: var(--gradient-main);
-  filter: blur(100px);
-  z-index: -1;
-  transform: scale(1.05) scaleY(-1);
 }
 .footer__content {
   display: grid;

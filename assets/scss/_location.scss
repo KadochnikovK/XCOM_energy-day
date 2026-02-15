@@ -9,7 +9,7 @@
          border-radius: var(--size-lg);;
         overflow: hidden;
         z-index: 3;
-        background: url(./images/background.png) center/cover no-repeat;
+        background: var(--gradient-main);
         position: relative;
     }
 

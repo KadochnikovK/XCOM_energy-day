@@ -7,9 +7,12 @@
     --color-dark: #000000;
     --color-red: #b41313;
 
-    --gradient-main: linear-gradient(184.95deg, #afe5e1 1.95%, rgba(113, 90, 74, 0) 93.72%);
+    --gradient-main:  linear-gradient(103.38deg, #000000 0.21%, #000213 66.67%, #0098EE 133.13%);
+    --gradient-second: linear-gradient(103.38deg, #000000 0.21%, #2B2B2B 133.13%);;
 
-    // sizes
+    
+
+ 
     --size-base: calc(min(100vh, 100vw) * 0.02 + max(100vh, 100vw) * 0.008);
 
     --size-xxxxs: calc(var(--size-base) * 0.2);

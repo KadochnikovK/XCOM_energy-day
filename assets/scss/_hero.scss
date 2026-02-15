@@ -1,10 +1,15 @@
 .hero {
-    background: url(./images/background.png) center/cover no-repeat;
+    background: url('./images/background.png'), var(--gradient-main);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    
 
     overflow: hidden;
     position: relative;
     align-items: center;
-    border-radius: 0 0 var(--size-sm) var(--size-sm);
+    // border-radius: 0 0 var(--size-sm) var(--size-sm);
     min-height: 800px;
 
     &__logo {
@@ -88,6 +93,7 @@
     &__button-block {
         display: flex;
         justify-content: center;
+        align-items: center;
 
         @include lg {
             justify-content: space-between;

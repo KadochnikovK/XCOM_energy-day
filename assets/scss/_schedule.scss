@@ -47,15 +47,15 @@
         flex-direction: column;
         gap: var(--size-sm);
 
-        @include xl {
+        @include xxl {
             flex-direction: row;
         }
     }
 
     &__card {
-        background: url(./images/background.png) center/cover no-repeat;
-        border-radius: var(--size-lg);
-        padding: var(--size-lg) var(--size-sm);
+
+        // border-radius: var(--size-lg);
+        padding: var(--size-lg) 0;
         display: flex;
         flex-direction: column;
         flex-basis: 100%;
@@ -63,6 +63,7 @@
         position: relative;
         gap: var(--size-xs);
         overflow: hidden;
+        color: var(--color-dark);
 
         &--image {
             padding-right: 40%;
@@ -80,14 +81,18 @@
             }
 
             @include lg {
-                padding-right: 17%;
+                padding-right: 30%;
 
                 &::after {
-                    width: 600px;
+                    aspect-ratio: 1;
                     height: 330px;
-                    transform: translateX(75px) translateY(-50%);
-                    background: url(./images/item.svg) right/contain no-repeat;
+                    transform: translateY(-50%);
+                    background: url(./images/item.svg) right / contain no-repeat;
                 }
+            }
+
+            @include xxl {
+                padding-right: 20%;
             }
         }
 
@@ -113,9 +118,9 @@
     }
 
     &__table {
-        background: url(./images/background.png) center/cover no-repeat;
+        // background: var(--gradient-main);
         border-radius: var(--size-lg);
-        padding: var(--size-lg) var(--size-sm);
+        // padding: 0 var(--size-sm);
         display: flex;
         flex-direction: column;
         position: relative;
@@ -136,7 +141,7 @@
             align-items: center;
             border: none !important;
 
-            background: url(./images/background.png) center/cover no-repeat;
+            // background: var(--gradient-main);
             border-radius: var(--size-lg);
             padding: var(--size-lg) var(--size-sm);
             display: flex;
@@ -160,6 +165,7 @@
         padding: var(--size-xxxs);
         display: flex;
         align-items: center;
+        position: relative;
         color: var(--color-bright);
         gap: var(--size-sm);
         font-weight: 700;
@@ -167,9 +173,11 @@
 
         &--time {
             font-size: var(--size-md);
+
             * {
                 font-size: var(--size-lg);
             }
+
             border-right: 1px solid var(--color-bright);
 
             & .navigation__nav-next {
@@ -179,6 +187,30 @@
             & .navigation__nav-prev {
                 margin-right: auto;
             }
+
+            @include lg {
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 100%;
+                    right: -1px;
+                    height: var(--size-lg);
+                    width: 1px;
+                    border-right: 1px solid var(--color-bright);
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 100%;
+                    right: -1px;
+                    height: var(--size-lg);
+                    width: 1px;
+                    border-right: 1px solid var(--color-bright);
+                }
+            }
+
+
         }
 
         &--description {
@@ -187,20 +219,20 @@
     }
 
     &__card-headline {
-        color: var(--color-bright);
+        // color: var(--color-bright);
         font-weight: 900;
         font-size: var(--size-md);
         line-height: 1.2;
     }
 
     &__card-text {
-        color: var(--color-bright);
+        // color: var(--color-bright);
         font-size: var(--size-xs);
         line-height: 1.2;
 
         strong {
             font-weight: 700;
-            color: var(--color-bright);
+            // color: var(--color-bright);
         }
     }
 
@@ -214,23 +246,12 @@
         text-align: center;
         gap: var(--size-sm);
 
-        &::before {
-            content: "";
-            position: absolute;
-            inset: 0;
 
-            background: url(./images/background.png) center/cover no-repeat;
-            filter: blur(100px);
-
-            z-index: -1;
-
-            transform: scale(1.05);
-        }
     }
 
     &__offer-text {
-        font-weight: 600;
-        color: var(--color-bright);
+        font-weight: 700;
+        color: var(--color-dark);
         font-size: var(--size-md);
     }
 

@@ -25,18 +25,18 @@
         flex-direction: column;
         position: relative;
         transition: all 0.3s ease-in-out;
-        // background: url(./images/background.png) center/cover no-repeat;
+     
 
         &:nth-child(1n) {
-            background: url(./images/background.png) left no-repeat;
+            background: var(--gradient-main);
         }
 
         &:nth-child(2n) {
-            background: url(./images/background.png) center no-repeat;
+            background: var(--gradient-main);
         }
 
         &:nth-child(3n) {
-            background: url(./images/background.png) right no-repeat;
+            background: var(--gradient-main);
         }
         &--active {
             background-color: white !important;

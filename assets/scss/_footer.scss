@@ -10,7 +10,7 @@
         inset: -10%;
         top: var(--size-md);
 
-        background: url(./images/background.png) center/cover no-repeat;
+        background: var(--gradient-main);
         filter: blur(100px);
 
         z-index: -1;

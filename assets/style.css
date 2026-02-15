@@ -820,6 +820,11 @@ a {
   font-weight: 700;
   text-align: center;
 }
+@media (min-width: 1224px) {
+  .schedule__cell {
+    text-align: left;
+  }
+}
 .schedule__cell--time {
   font-size: var(--size-md);
 }
